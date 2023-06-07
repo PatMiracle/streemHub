@@ -41,7 +41,7 @@ const Footer = () => {
             className="rounded-md text-black py-2 px-3 mt-6"
             placeholder="Enter email address"
           />
-          <button className="bg-purple-600 block mt-4 ml-auto py-1 px-3 rounded-md">
+          <button className="bg-purple500 block mt-4 ml-auto py-1 px-4 text-sm rounded-md">
             Send
           </button>
         </form>
