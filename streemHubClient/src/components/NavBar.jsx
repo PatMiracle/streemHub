@@ -14,7 +14,7 @@ const NavBar = () => {
         <img src={logo} alt="logo" className="w-14" />
       </Link>
       {navLinks.map(({ link, text }, i) => (
-        <Link to={link} className="text-xl capitalize">
+        <Link to={link} className="text-xl capitalize" key={i}>
           {text}
         </Link>
       ))}
