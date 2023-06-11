@@ -1,8 +1,9 @@
 from django.db import models
 from UserModel.models import User
+from UserModel.utils import generate_id
 
 class Post(models.Model):
-    post_id = models.AutoField(primary_key=True)
+    id = models.CharField(primary_key=True, max_length=128, unique=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=255)
     no_of_likes = models.PositiveIntegerField()
@@ -14,9 +15,14 @@ class Post(models.Model):
 
     def __str__(self):
         return f'Post title: {self.title} - User: {self.user}'
+    
+    def save(self, *args, **kwargs):
+        while not self.id:
+            self.id = generate_id()
+        return super().save(*args, **kwargs)
 
 class Comment(models.Model):
-    comment_id = models.AutoField(primary_key=True)
+    id = models.CharField(primary_key=True, max_length=128, unique=True)
     post_detail = models.ForeignKey(Post, on_delete=models.CASCADE)
     content = models.TextField()
     date = models.DateTimeField()
@@ -28,9 +34,14 @@ class Comment(models.Model):
 
     def __str__(self):
         return f'Post ID: {self.post_detail} - Content: {self.content}'
+    
+    def save(self, *args, **kwargs):
+        while not self.id:
+            self.id = generate_id()
+        return super().save(*args, **kwargs)
 
 class Subcomment(models.Model):
-    subcomment_id = models.AutoField(primary_key=True)
+    id = models.CharField(primary_key=True, max_length=128, unique=True)
     comment = models.ManyToManyField(Comment)
     content = models.TextField()
     no_of_likes = models.PositiveIntegerField()
@@ -40,3 +51,8 @@ class Subcomment(models.Model):
 
     def __str__(self):
         return f'Comment Detail: {self.content} - User: {self.user}'
+    
+    def save(self, *args, **kwargs):
+        while not self.id:
+            self.id = generate_id()
+        return super().save(*args, **kwargs)

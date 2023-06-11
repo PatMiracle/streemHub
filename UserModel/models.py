@@ -1,7 +1,8 @@
 from django.db import models
+from .utils import generate_id
 
 class User(models.Model):
-    user_id = models.AutoField(primary_key=True)
+    id = models.CharField(primary_key=True, max_length=128, unique=True)
     first_name = models.CharField(max_length=255)
     email = models.EmailField()
     last_name = models.CharField(max_length=255)
@@ -21,4 +22,9 @@ class User(models.Model):
     no_of_group_is_admin = models.PositiveIntegerField()
 
     def __str__(self):
-        return f'User ID: {self.user_id} - Username: {self.username}'
+        return f'User ID: {self.id} - Username: {self.username}'
+    
+    def save(self, *args, **kwargs):
+        while not self.id:
+            self.id = generate_id()
+        return super().save(*args, **kwargs)
