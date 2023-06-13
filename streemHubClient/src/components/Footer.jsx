@@ -1,22 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react'
+import { footerLinks } from '../utils/data'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
-  // temp data
-  const data = [
-    {
-      category: 'products',
-      list: ['pricing', 'features', 'customers', 'feedback'],
-    },
-    {
-      category: 'help',
-      list: ['getting started', 'sign up', 'login', 'FAQ'],
-    },
-    {
-      category: 'site map',
-      list: ['ABOUT US', 'COLLAB', 'POSTS', 'CONTACT US'],
-    },
-  ]
-
   const [email, setEmail] = useState('')
   const emailRef = useRef(null)
 
@@ -38,15 +24,15 @@ const Footer = () => {
 
   return (
     <footer className="bg-black text-white p-32 flex justify-between">
-      {data.map(({ category, list }, i) => {
+      {footerLinks.map(({ category, list }, i) => {
         return (
           <div key={i}>
             <h3 className="font-bold uppercase text-2xl">{category}</h3>
             <ul className="flex flex-col gap-6 pt-6 capitalize">
-              {list.map((text, i) => (
-                <li key={i} className="text-xl">
+              {list.map(({ text, url }, i) => (
+                <Link key={i} className="text-xl" to={url}>
                   {text}
-                </li>
+                </Link>
               ))}
             </ul>
           </div>
