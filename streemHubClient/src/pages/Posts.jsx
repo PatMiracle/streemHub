@@ -83,7 +83,7 @@ const Posts = () => {
           <FaMicrophone className="text-purple500 opacity-75" size={56} />
         </div>
         {/* posts */}
-        <section className="py-24">
+        <section className="pt-24 pb-10">
           {posts.map(({ id, name, text, img }) => (
             <Post key={id} name={name} text={text} img={img} />
           ))}
