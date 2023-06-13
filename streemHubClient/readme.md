@@ -22,4 +22,4 @@ npm install
 npm run dev
 ```
 
-- Open the link [localhost:5173](localhost:5173/) in your browser
+- Open the link [localhost:5173](localhost:5173/) in your browser.
