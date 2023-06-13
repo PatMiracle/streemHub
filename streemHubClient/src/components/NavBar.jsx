@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 const NavBar = () => {
   const navLinks = [
     { link: '/', text: 'home' },
-    { link: '/', text: 'posts' },
+    { link: 'posts', text: 'posts' },
     { link: '/', text: 'collab' },
     { link: '/', text: 'about' },
   ]
@@ -18,8 +18,12 @@ const NavBar = () => {
         </Link>
       ))}
       <div className="ml-auto">
-        <Link className="bg-black text-white px-5 py-3 text-xl">Login</Link>
-        <Link className="bg-white text-black px-5 py-3 text-xl">Sign up</Link>
+        <Link className="bg-black text-white px-5 py-3 text-xl" to="login">
+          Login
+        </Link>
+        <Link className="bg-white text-black px-5 py-3 text-xl" to="signup">
+          Sign up
+        </Link>
       </div>
     </nav>
   )
