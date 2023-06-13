@@ -21,9 +21,9 @@ const Posts = () => {
           }}
           role="banner"
         >
-          <div>
+          <div className="text-black">
             <p className="text-xl mb-2">Discover</p>
-            <h2 className="text-5xl font-semibold text-black">
+            <h2 className="text-5xl font-semibold">
               Latest News
               <br /> and Trending Post.
             </h2>
