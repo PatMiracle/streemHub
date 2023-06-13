@@ -23,7 +23,7 @@ const Posts = () => {
         >
           <div>
             <p className="text-xl mb-2">Discover</p>
-            <h2 className="text-5xl font-semibold">
+            <h2 className="text-5xl font-semibold text-black">
               Latest News
               <br /> and Trending Post.
             </h2>
@@ -55,7 +55,7 @@ const Posts = () => {
             <select
               name="categories"
               id="categories"
-              className="w-[110px] cursor-pointer"
+              className="w-[110px] cursor-pointer text-black"
             >
               <option value="category">Categories</option>
               <option value="books">Books</option>

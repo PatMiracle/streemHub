@@ -23,7 +23,7 @@ const Footer = () => {
   }
 
   return (
-    <footer className="bg-black text-white p-32 flex justify-between">
+    <footer className="bg-black p-32 flex justify-between">
       {footerLinks.map(({ category, list }, i) => {
         return (
           <div key={i}>

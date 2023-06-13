@@ -18,10 +18,10 @@ const NavBar = () => {
         </Link>
       ))}
       <div className="ml-auto">
-        <Link className="bg-black text-white px-5 py-3 text-xl" to="login">
+        <Link className="bg-black px-5 py-3 text-xl" to="/login">
           Login
         </Link>
-        <Link className="bg-white text-black px-5 py-3 text-xl" to="signup">
+        <Link className="bg-white text-black px-5 py-3 text-xl" to="/signup">
           Sign up
         </Link>
       </div>
