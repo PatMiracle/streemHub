@@ -12,15 +12,6 @@ const Login = () => {
   const pwdRef = useRef(null)
   const showRef = useRef(null)
 
-  // show/hide password
-  if (showPwd) {
-    pwdRef.current.type = 'text'
-    showRef.current.textContent = 'Hide'
-  } else {
-    pwdRef.current.type = 'password'
-    showRef.current.textContent = 'Show'
-  }
-
   // clear error as input changes
   useEffect(() => {
     setFormError(false)
@@ -85,7 +76,7 @@ const Login = () => {
               className="absolute left-5 top-3"
             />
             <input
-              type="password"
+              type={showPwd ? 'text' : 'password'}
               className="w-full bg-[#D9D9D9] py-3 px-16 rounded-lg"
               placeholder="Password"
               onChange={(e) => SetPassword(e.target.value)}
@@ -96,7 +87,7 @@ const Login = () => {
               onClick={() => setShowPwd(!showPwd)}
               ref={showRef}
             >
-              Show
+              {showPwd ? 'Hide' : 'Show'}
             </span>
           </div>
           <div className="flex justify-between items-center mt-5">
