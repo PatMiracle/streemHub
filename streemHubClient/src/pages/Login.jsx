@@ -1,12 +1,25 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { AiOutlineGoogle } from 'react-icons/ai'
 
 const Login = () => {
   const [username, setUsername] = useState('')
   const [password, SetPassword] = useState('')
+  const [showPwd, setShowPwd] = useState(false)
   const [remember, setRemember] = useState(false)
   const [formError, setFormError] = useState(false)
+
+  const pwdRef = useRef(null)
+  const showRef = useRef(null)
+
+  // show/hide password
+  if (showPwd) {
+    pwdRef.current.type = 'text'
+    showRef.current.textContent = 'Hide'
+  } else {
+    pwdRef.current.type = 'password'
+    showRef.current.textContent = 'Show'
+  }
 
   // clear error as input changes
   useEffect(() => {
@@ -50,6 +63,7 @@ const Login = () => {
           onSubmit={handleSubmit}
           className="flex flex-col gap-4 border-b border-solid border-b-purple500 pt-8 pb-14"
         >
+          {/* username */}
           <div className="relative">
             <img
               src="/user.svg"
@@ -63,6 +77,7 @@ const Login = () => {
               onChange={(e) => setUsername(e.target.value)}
             />
           </div>
+          {/* password */}
           <div className="relative">
             <img
               src="/passwordcheck.svg"
@@ -74,8 +89,15 @@ const Login = () => {
               className="w-full bg-[#D9D9D9] py-3 px-16 rounded-lg"
               placeholder="Password"
               onChange={(e) => SetPassword(e.target.value)}
+              ref={pwdRef}
             />
-            <span className="text-black absolute right-10 top-3">Show</span>
+            <span
+              className="text-black absolute right-10 top-3 cursor-pointer"
+              onClick={() => setShowPwd(!showPwd)}
+              ref={showRef}
+            >
+              Show
+            </span>
           </div>
           <div className="flex justify-between items-center mt-5">
             <label htmlFor="remember" className="cursor-pointer">
