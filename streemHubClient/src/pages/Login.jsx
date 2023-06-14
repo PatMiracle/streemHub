@@ -10,7 +10,6 @@ const Login = () => {
   const [formError, setFormError] = useState(false)
 
   const pwdRef = useRef(null)
-  const showRef = useRef(null)
 
   // clear error as input changes
   useEffect(() => {
@@ -85,7 +84,6 @@ const Login = () => {
             <span
               className="text-black absolute right-10 top-3 cursor-pointer"
               onClick={() => setShowPwd(!showPwd)}
-              ref={showRef}
             >
               {showPwd ? 'Hide' : 'Show'}
             </span>
