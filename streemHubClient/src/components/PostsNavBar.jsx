@@ -7,7 +7,7 @@ const PostsNavBar = () => {
       <Link to="/">
         <img src="/logo.svg" alt="logo" className="w-14" />
       </Link>
-      <div className="flex gap-4 items-center ml-[5%]">
+      <div className="flex gap-4 items-center ml-[7%]">
         <Link to="/">
           <img src="/home.svg" alt="" />
         </Link>
