@@ -18,7 +18,7 @@ const Home = () => {
 
   return (
     <div className="homepage">
-      <header className="min-h-screen relative after:absolute after:left-0 after:top-0 after:h-full after:w-full after:bg-[url(/banner.png)] after:-z-20 before:absolute before:left-0 before:top-0 before:h-full before:w-full before:bg-[url(/banner-overlay.png)] before:mix-blend-color before:-z-10">
+      <header className="min-h-screen relative after:absolute after:left-0 after:top-0 after:h-full after:w-full after:bg-[url(/bg-moon.png)] after:-z-20 before:absolute before:left-0 before:top-0 before:h-full before:w-full before:bg-[url(/bg-moon-overlay.png)] before:mix-blend-color before:-z-10">
         <NavBar />
         <div className="text-center pt-28 z-20">
           <h2 className="text-6xl font-extrabold mb-10">STREEMHUB</h2>
