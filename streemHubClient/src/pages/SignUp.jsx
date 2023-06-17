@@ -25,7 +25,7 @@ const SignUp = () => {
     if (
       !name_regex.test(firstName) ||
       !name_regex.test(lastName) ||
-      email_regex.test(email)
+      !email_regex.test(email)
     ) {
       setFormError(true)
     }
