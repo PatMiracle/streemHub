@@ -123,8 +123,9 @@ const SignUp = () => {
                 Policy
               </Link>
             </label>
-            <Link className="text-purple500">Forgot Password</Link>
-            <button className="bg-purple500 py-1 px-4 rounded-lg">Login</button>
+            <button className="bg-purple500 py-2 px-5 rounded-lg text-xl">
+              Sign Up
+            </button>
           </div>
         </form>
         <button className="w-[95%] mx-auto flex justify-center bg-[#D9D9D9] py-3 px-2 rounded-lg text-left mt-8">
