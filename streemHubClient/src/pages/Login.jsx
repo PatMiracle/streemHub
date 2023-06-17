@@ -9,8 +9,6 @@ const Login = () => {
   const [remember, setRemember] = useState(false)
   const [formError, setFormError] = useState(false)
 
-  const pwdRef = useRef(null)
-
   // clear error as input changes
   useEffect(() => {
     setFormError(false)
@@ -30,15 +28,15 @@ const Login = () => {
   }
 
   return (
-    <main className="flex">
+    <main className="flex gap-40">
       <img
         src="/login-img.png"
         alt=""
-        className="h-screen fixed top-0 left-0"
+        className="min-h-screen object-cover w-[40%]"
       />
-      <div className="pt-28 px-40 w-[60%] ml-auto relative">
+      <div className="pt-28 w-[40%] relative">
         {formError && (
-          <p className="absolute bg-[#FF1212aa] py-2 px-4 rounded-lg top-7 left-48">
+          <p className="absolute bg-[#FF1212aa] py-2 px-4 rounded-lg top-7 left-4">
             Incorrect username or password. All passwords must be at
             <br />
             least 6 Characters
@@ -47,7 +45,10 @@ const Login = () => {
         <h2 className="font-bold text-5xl">Login</h2>
         <p className="pt-5">
           Don't have an account?
-          <Link className="text-purple500"> Sign Up</Link>
+          <Link className="text-purple500" to="/signup">
+            {' '}
+            Sign Up
+          </Link>
         </p>
         <form
           onSubmit={handleSubmit}
@@ -58,11 +59,11 @@ const Login = () => {
             <img
               src="/user.svg"
               alt=""
-              className="absolute text-black top-3 left-5"
+              className="absolute text-black top-4 left-5"
             />
             <input
               type="text"
-              className="w-full bg-[#D9D9D9] py-3 px-16 rounded-lg"
+              className="w-full bg-[#D9D9D9] py-4 px-16 rounded-lg"
               placeholder="Username"
               onChange={(e) => setUsername(e.target.value)}
             />
@@ -72,17 +73,16 @@ const Login = () => {
             <img
               src="/passwordcheck.svg"
               alt=""
-              className="absolute left-5 top-3"
+              className="absolute left-5 top-4"
             />
             <input
               type={showPwd ? 'text' : 'password'}
-              className="w-full bg-[#D9D9D9] py-3 px-16 rounded-lg"
+              className="w-full bg-[#D9D9D9] py-4 px-16 rounded-lg"
               placeholder="Password"
               onChange={(e) => SetPassword(e.target.value)}
-              ref={pwdRef}
             />
             <span
-              className="text-black absolute right-10 top-3 cursor-pointer"
+              className="text-black absolute right-10 top-4 cursor-pointer select-none"
               onClick={() => setShowPwd(!showPwd)}
             >
               {showPwd ? 'Hide' : 'Show'}
