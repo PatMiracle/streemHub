@@ -14,34 +14,36 @@ const VerifyEmail = () => {
         <p className="text-xl py-6">
           Please enter the 4 digit code sent to yourmail@example.com
         </p>
-        <div className="flex gap-5">
-          <input
-            type="text"
-            className="bg-[#D9D9D9] text-2xl text-center py-5 w-[131px] rounded-lg"
-            maxLength={1}
-          />
-          <input
-            type="text"
-            className="bg-[#D9D9D9] text-2xl text-center py-5 w-[131px] rounded-lg"
-            maxLength={1}
-          />
-          <input
-            type="text"
-            className="bg-[#D9D9D9] text-2xl text-center py-5 w-[131px] rounded-lg"
-            maxLength={1}
-          />
-          <input
-            type="text"
-            className="bg-[#D9D9D9] text-2xl text-center py-5 w-[131px] rounded-lg"
-            maxLength={1}
-          />
-        </div>
-        <button className="text-purple500 text-2xl pt-14 pb-7">
-          Resend Code
-        </button>
-        <button className="font-bold bg-purple500 block text-2xl w-[580px] py-4 rounded-lg">
-          Confirm
-        </button>
+        <form onSubmit={(e) => e.preventDefault()}>
+          <div className="flex gap-5">
+            <input
+              type="text"
+              className="bg-[#D9D9D9] text-2xl text-center py-5 w-[131px] rounded-lg"
+              maxLength={1}
+            />
+            <input
+              type="text"
+              className="bg-[#D9D9D9] text-2xl text-center py-5 w-[131px] rounded-lg"
+              maxLength={1}
+            />
+            <input
+              type="text"
+              className="bg-[#D9D9D9] text-2xl text-center py-5 w-[131px] rounded-lg"
+              maxLength={1}
+            />
+            <input
+              type="text"
+              className="bg-[#D9D9D9] text-2xl text-center py-5 w-[131px] rounded-lg"
+              maxLength={1}
+            />
+          </div>
+          <button type="button" className="text-purple500 text-2xl pt-14 pb-7">
+            Resend Code
+          </button>
+          <button className="font-bold bg-purple500 block text-2xl w-[580px] py-4 rounded-lg">
+            Confirm
+          </button>
+        </form>
         <Link
           to="/signup"
           className="text-purple500 text-2xl pt-4 block text-center underline"

@@ -43,7 +43,7 @@ const SignUp = () => {
       />
       <div className="pt-20 w-[40%] relative">
         {formError && (
-          <p className="absolute bg-[#FF1212aa] py-2 px-4 rounded-lg top-7 left-4">
+          <p className="absolute bg-[#FF1212aa] py-2 px-4 rounded-lg top-7 left-4 backdrop-blur-md">
             Incorrect name, email or password. All passwords must be at
             <br />
             least 6 Characters
