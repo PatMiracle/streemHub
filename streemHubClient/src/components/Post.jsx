@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FiShare2, FiThumbsUp } from 'react-icons/fi'
 import { TbMessageCircle2 } from 'react-icons/tb'
+import PostCommments from './PostCommments'
 
 const Post = ({ name, text, img }) => {
+  const [isLike, setIsLike] = useState(false)
+  const [showComments, setShowComments] = useState(false)
+
   return (
     <div>
       <div className="flex gap-9 items-center">
@@ -16,13 +20,16 @@ const Post = ({ name, text, img }) => {
         )}
         <div className="flex gap-6 ml-auto w-max py-4">
           <span className="text-xl flex items-end gap-2">
-            <button>
-              <FiThumbsUp className="hover:text-purple500" size={40} />
+            <button onClick={() => setIsLike(!isLike)}>
+              <FiThumbsUp
+                className={isLike ? 'text-purple500' : 'text-white'}
+                size={40}
+              />
             </button>
             1000
           </span>
           <span className="text-xl flex items-end gap-2">
-            <button>
+            <button onClick={() => setShowComments(!showComments)}>
               <TbMessageCircle2
                 className="hover:text-purple500 -scale-x-100"
                 size={40}
@@ -38,6 +45,7 @@ const Post = ({ name, text, img }) => {
           </span>
         </div>
       </div>
+      {showComments && <PostCommments />}
     </div>
   )
 }
