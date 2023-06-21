@@ -35,7 +35,7 @@ const SignUp = () => {
   }
 
   return (
-    <main className="flex gap-20">
+    <section className="flex gap-[10%]">
       <img
         src="/signup-img.png"
         alt=""
@@ -65,14 +65,14 @@ const SignUp = () => {
             {/* first Name */}
             <input
               type="text"
-              className="w-full bg-[#D9D9D9] py-4 px-10 rounded-lg"
+              className="w-full bg-inputBg py-4 px-10 rounded-lg"
               placeholder="First Name"
               onChange={(e) => setFirstName(e.target.value)}
             />
             {/* last Name */}
             <input
               type="text"
-              className="w-full bg-[#D9D9D9] py-4 px-10 rounded-lg"
+              className="w-full bg-inputBg py-4 px-10 rounded-lg"
               placeholder="Last Name"
               onChange={(e) => setLastName(e.target.value)}
             />
@@ -80,7 +80,7 @@ const SignUp = () => {
           {/* email */}
           <input
             type="text"
-            className="w-full bg-[#D9D9D9] py-4 px-10 rounded-lg"
+            className="w-full bg-inputBg py-4 px-10 rounded-lg"
             placeholder="Email"
             onChange={(e) => setEmail(e.target.value)}
           />
@@ -93,7 +93,7 @@ const SignUp = () => {
             />
             <input
               type={showPwd ? 'text' : 'password'}
-              className="w-full bg-[#D9D9D9] py-4 px-16 rounded-lg"
+              className="w-full bg-inputBg py-4 px-16 rounded-lg"
               placeholder="Password"
               onChange={(e) => SetPassword(e.target.value)}
             />
@@ -128,14 +128,14 @@ const SignUp = () => {
             </button>
           </div>
         </form>
-        <button className="w-[95%] mx-auto flex justify-center bg-[#D9D9D9] py-3 px-2 rounded-lg text-left mt-8">
+        <button className="w-[95%] mx-auto flex justify-center bg-inputBg py-3 px-2 rounded-lg text-left mt-8">
           <AiOutlineGoogle className="text-purple500" size={30} />
           <span className="font-bold text-2xl text-black inline-block w-[90%] text-center">
             Sign Up with Google
           </span>
         </button>
       </div>
-    </main>
+    </section>
   )
 }
 

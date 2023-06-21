@@ -28,7 +28,7 @@ const Login = () => {
   }
 
   return (
-    <main className="flex gap-40">
+    <section className="flex gap-[10%]">
       <img
         src="/login-img.png"
         alt=""
@@ -63,7 +63,7 @@ const Login = () => {
             />
             <input
               type="text"
-              className="w-full bg-[#D9D9D9] py-4 px-16 rounded-lg"
+              className="w-full bg-inputBg py-4 px-16 rounded-lg"
               placeholder="Username"
               onChange={(e) => setUsername(e.target.value)}
             />
@@ -77,7 +77,7 @@ const Login = () => {
             />
             <input
               type={showPwd ? 'text' : 'password'}
-              className="w-full bg-[#D9D9D9] py-4 px-16 rounded-lg"
+              className="w-full bg-inputBg py-4 px-16 rounded-lg"
               placeholder="Password"
               onChange={(e) => SetPassword(e.target.value)}
             />
@@ -102,14 +102,14 @@ const Login = () => {
             <button className="bg-purple500 py-1 px-4 rounded-lg">Login</button>
           </div>
         </form>
-        <button className="w-[95%] mx-auto flex justify-center bg-[#D9D9D9] py-3 px-2 rounded-lg text-left mt-8">
+        <button className="w-[95%] mx-auto flex justify-center bg-inputBg py-3 px-2 rounded-lg text-left mt-8">
           <AiOutlineGoogle className="text-purple500" size={30} />
           <span className="font-bold text-2xl text-black inline-block w-[90%] text-center">
             Log in with Google
           </span>
         </button>
       </div>
-    </main>
+    </section>
   )
 }
 
