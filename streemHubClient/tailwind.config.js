@@ -7,6 +7,7 @@ export default {
         purple500: '#8B0CFF',
         purple600: '#8B0CFFaa',
         purple700: '#300259',
+        inputBg: '#d9d9d9',
       },
     },
   },
