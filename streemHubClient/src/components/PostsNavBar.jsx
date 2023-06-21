@@ -3,7 +3,7 @@ import { IoNotificationsOutline, IoPersonCircle } from 'react-icons/io5'
 
 const PostsNavBar = () => {
   return (
-    <nav className="py-10 flex justify-between items-center gap-6">
+    <nav className="py-[4%] flex justify-between items-center gap-6">
       <Link to="/">
         <img src="/logo.svg" alt="logo" className="w-14" />
       </Link>

@@ -13,3 +13,7 @@ body {
 input {
   color: black;
 }
+:is(header, main, footer) {
+  padding-left: 8%;
+  padding-right: 8%;
+}

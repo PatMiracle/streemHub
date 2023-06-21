@@ -16,7 +16,7 @@ const Post = ({ name, text, img }) => {
       <div className="w-[80%] ml-36">
         <p className="text-3xl mb-9">{text}</p>
         {img && (
-          <div className="w-full h-[700px] bg-[#979595] opacity-30 rounded-[30px]"></div>
+          <div className="w-full h-[500px] bg-[#979595] opacity-30 rounded-[30px]"></div>
         )}
         <div className="flex gap-6 ml-auto w-max py-4">
           <span className="text-xl flex items-end gap-2">

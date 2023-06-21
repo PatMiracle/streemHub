@@ -23,7 +23,7 @@ const Footer = () => {
   }
 
   return (
-    <footer className="p-32 flex justify-between">
+    <footer className="py-[10%] flex justify-between">
       {footerLinks.map(({ category, list }, i) => {
         return (
           <div key={i}>
