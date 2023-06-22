@@ -16,7 +16,7 @@ const Main = () => {
             className="features-container flex items-center justify-between even:flex-row-reverse even:text-right"
             key={i}
           >
-            <div className="text-container relative py-8 px-10 rounded-[14px] max-w-[80%] before:absolute before:w-10 before:h-10 before:border-[3px] before:bg-black before:z-20 before:border-purple500 before:rounded-full before:top-2 after:absolute after:w-[2px] after:h-[570px] after:bg-purple500 after:top-12">
+            <div className="text-container relative py-8 px-10 rounded-[14px] max-w-[80%] before:absolute before:w-10 before:h-10 before:border-[3px] before:bg-black before:z-20 before:border-purple500 before:rounded-full before:top-2 after:absolute after:w-[2px] after:h-[600px] after:bg-purple500 after:top-12">
               <h2 className="text-4xl font-bold text-purple500">{title}</h2>
               <p className="text-xl text-slate-50">{text}</p>
             </div>
