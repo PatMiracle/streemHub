@@ -25,8 +25,8 @@ const Header = () => {
             {searchBtns.map((text, i) => (
               <button
                 key={i}
-                className={`text-2xl pt-3 pb-1 px-6 text-white capitalize ${
-                  activeBtn === i && 'bg-purple700 font-bold'
+                className={`text-2xl pt-3 pb-1 px-6 capitalize ${
+                  activeBtn === i && 'bg-purple700 font-bold text-purple500'
                 }`}
                 onClick={() => setActiveBtn(i)}
               >
