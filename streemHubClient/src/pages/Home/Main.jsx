@@ -5,7 +5,7 @@ import { MdPlayArrow } from 'react-icons/md'
 const Main = () => {
   return (
     <main className="mt-20 py-40 relative before:absolute before:top-0 before:left-0 before:w-[84%] before:mx-[8%] before:h-[2px] before:bg-purple500 after:absolute after:top-[2px] after:left-[8%] after:h-48 after:w-[2px] after:bg-purple500">
-      <div className="absolute -top-6 right-[8%] bg-black pl-6 after:absolute after:top-24 after:h-[402px] after:w-[2px] after:right-0 after:bg-purple500">
+      <div className="absolute -top-6 right-[8%] bg-black pl-6 after:absolute after:top-24 after:h-[402px] after:w-[2px] after:right-[2px] after:bg-purple500">
         <h2 className="text-5xl font-bold">Main Features</h2>
         <p className="text-xl">Here are some of our main features</p>
       </div>
@@ -16,7 +16,7 @@ const Main = () => {
             className="features-container flex items-center justify-between even:flex-row-reverse even:text-right"
             key={i}
           >
-            <div className="text-container relative py-8 px-10 rounded-[14px] max-w-[80%] before:absolute before:w-10 before:h-10 before:border-[3px] before:border-purple500 before:rounded-full before:top-2 after:absolute after:w-[2px] after:h-[570px] after:bg-purple500 after:top-12">
+            <div className="text-container relative py-8 px-10 rounded-[14px] max-w-[80%] before:absolute before:w-10 before:h-10 before:border-[3px] before:bg-black before:z-20 before:border-purple500 before:rounded-full before:top-2 after:absolute after:w-[2px] after:h-[570px] after:bg-purple500 after:top-12">
               <h2 className="text-4xl font-bold text-purple500">{title}</h2>
               <p className="text-xl text-slate-50">{text}</p>
             </div>
