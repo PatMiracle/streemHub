@@ -43,8 +43,7 @@ INSTALLED_APPS = [
     'read',
     'engage',
     'execute',
-    'management',
-    'rest_framework',
+    'management'
 ]
 
 MIDDLEWARE = [
