@@ -38,12 +38,19 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'search',
-    'talk',
-    'read',
-    'engage',
-    'execute',
-    'management'
+
+    # Third party app
+    'django_seed',
+    'rest_framework',
+
+    # Local apps
+    'search.apps.SearchConfig',
+    'talk.apps.TalkConfig',
+    'read.apps.ReadConfig',
+    'engage.apps.EngageConfig',
+    'execute.apps.ExecuteConfig',
+    'management.apps.ManagementConfig',
+    'UserModel.apps.UsermodelConfig',
 ]
 
 MIDDLEWARE = [
