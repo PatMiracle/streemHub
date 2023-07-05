@@ -11,7 +11,7 @@ from pathlib import Path
 
 
 
-def scrape(url='https://www.naijamusic.com.ng/gospel/page/3/', download_folder=r'C:\Users\USER\Desktop\streemhub\venv\StreemHub.ai\search\get_files'):
+def scrape(url, download_folder):
     kwargs = {'bypass_robots': True, 'project_name': 'scraped_files', 'open_in_browser':False}
     get_path = f'{str(Path(__file__).resolve().parent)}\scraped_files\{str(url).split("/")[2]}'
     dump_path = f'{str(Path(__file__).resolve().parent)}/zipped_files/{str(url).split("/")[2]}'
@@ -19,4 +19,4 @@ def scrape(url='https://www.naijamusic.com.ng/gospel/page/3/', download_folder=r
     zip.ziph(dump_path, get_path)
 
 #wp.encoding = 'utf-8ls
-scrape()
+#scrape()

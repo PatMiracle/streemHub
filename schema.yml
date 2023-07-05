@@ -1,0 +1,39 @@
+openapi: 3.0.3
+info:
+  title: STREEMHUB.AI API
+  version: 1.0.0
+  description: A HUB FOR STATE OF THE ART TECH
+paths:
+  /v1/search_url/:
+    get:
+      operationId: v1_search_url_retrieve
+      tags:
+      - v1
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /v1/search_url_path/:
+    get:
+      operationId: v1_search_url_path_retrieve
+      tags:
+      - v1
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+components:
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+    cookieAuth:
+      type: apiKey
+      in: cookie
+      name: sessionid
