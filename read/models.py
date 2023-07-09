@@ -19,18 +19,14 @@ class Scrape(models.Model):
         return super().save(*args, **kwargs)
 
 class Book(models.Model):
-    id = models.CharField(primary_key=True, max_length=128, unique=True)
+    id = models.AutoField(primary_key=True, max_length=128)
+    title = models.CharField(max_length=255)
+    author = models.CharField(max_length=255)
     summary = models.TextField(max_length=255)
-    audio_file = models.FileField(blank=True, upload_to='audio_files/')
+    download_link = models.URLField(blank=True)
     date_created = models.DateField(auto_now_add=True)
-
-    def __str__(self):
-        return self.id
     
-    def save(self, *args, **kwargs):
-        while not self.id:
-            self.id = generate_id()
-        return super().save(*args, **kwargs)
+ 
 
 class Article(models.Model):
     id = models.CharField(primary_key=True, max_length=128, unique=True)

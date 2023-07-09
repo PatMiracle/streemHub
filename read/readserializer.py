@@ -7,9 +7,20 @@ class ScrapeSerializers(serializers.ModelSerializer):
         fields = '__all__'
 
 class BookSerializer(serializers.ModelSerializer):
+    summary = serializers.SerializerMethodField()
+    
+    def get_summary(self, obj):
+        summary = obj.summary
+
+        paragraphs = summary.split("\n\n")
+
+        formatted_summary = "\n".join(paragraphs)
+
+        return formatted_summary
+
     class Meta:
         model = Book
-        fields = '__all__'
+        fields = ['title', 'author', 'summary', 'download_link', 'date_created']
 
 class ArticleSerializer(serializers.ModelSerializer):
     class Meta:

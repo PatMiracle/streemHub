@@ -21,8 +21,9 @@ jsbeautifier==1.14.8
 jsonschema==4.17.3
 lxml==4.9.2
 msgpack==1.0.5
+openai==0.27.8
 Pillow==9.5.0
-psycopg2==2.9.6
+psycopg2-binary
 pyrsistent==0.19.3
 python-dateutil==2.8.2
 pytz==2023.3
