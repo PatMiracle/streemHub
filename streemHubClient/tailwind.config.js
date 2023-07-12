@@ -9,6 +9,11 @@ export default {
         purple700: '#300259',
         inputBg: '#d9d9d9',
       },
+      screens: {
+        lg: '992px',
+        xl: '1280px',
+        '2xl': '1400px',
+      },
     },
   },
   plugins: [],
