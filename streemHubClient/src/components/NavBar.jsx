@@ -8,7 +8,7 @@ const NavBar = () => {
     { link: '/', text: 'about' },
   ]
   return (
-    <nav className="py-[4%] flex items-center gap-6">
+    <nav className="flex gap-6 items-center w-11/12 mx-auto pt-[4%] pb-[3%]">
       <Link to="/">
         <img src="/logo.svg" alt="logo" className="w-14" />
       </Link>

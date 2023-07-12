@@ -24,10 +24,10 @@
   background: linear-gradient(rgb(139, 12, 255) 0%, rgba(139, 12, 255, 0) 100%);
 }
 .features-container:nth-child(odd) .text-container::after {
-  left: -2.45rem;
+  left: -2.5rem;
 }
 .features-container:nth-child(even) .text-container::after {
-  right: -2.45rem;
+  right: -2.5rem;
 }
 .features-container:last-child .text-container::after {
   background: transparent;
