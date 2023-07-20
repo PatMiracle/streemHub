@@ -1,20 +1,21 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { AiOutlineGoogle } from 'react-icons/ai'
+import useFormError from '../hooks/useFormError'
+
+const user_regex = /^[a-zA-Z][a-zA-Z0-9]{2,}$/
 
 const Login = () => {
   const [username, setUsername] = useState('')
   const [password, SetPassword] = useState('')
   const [showPwd, setShowPwd] = useState(false)
   const [remember, setRemember] = useState(false)
-  const [formError, setFormError] = useState(false)
+  const { formError, setFormError } = useFormError()
 
   // clear error as input changes
   useEffect(() => {
     setFormError(false)
   }, [username, password])
-
-  const user_regex = /^[a-zA-Z][a-zA-Z0-9]{2,}$/
 
   const handleSubmit = (e) => {
     e.preventDefault()

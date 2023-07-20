@@ -4,7 +4,7 @@ import { posts } from '../../utils/data'
 
 const Main = () => {
   return (
-    <main className="py-48">
+    <main className="py-48 w-[85%] mx-auto">
       <div className="px-10 py-5 border-4 border-purple500 drop-shadow-md rounded-[30px] flex justify-between">
         <div className="w-14 h-14 bg-purple500 rounded-full"></div>
         <FaMicrophone className="text-purple500 opacity-75" size={56} />

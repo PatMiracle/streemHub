@@ -15,7 +15,7 @@ const Header = () => {
   const [search, setSearch] = useState('')
 
   return (
-    <header className="min-h-screen relative after:absolute after:left-0 after:top-0 after:h-full after:min-w-full after:bg-[url(/src/assets/images/home/bg-moon.png)] after:bg-cover after:bg-no-repeat after:-z-20 before:absolute before:left-0 before:top-0 before:h-full before:w-full before:bg-[url(/src/assets/images/home/bg-moon-overlay.png)] before:bg-cover before:mix-blend-color before:-z-10 pb-10">
+    <header className="relative after:absolute after:left-0 after:top-0 after:h-full after:min-w-full after:bg-[url(/src/assets/images/home/bg-moon.png)] after:bg-cover after:bg-no-repeat after:-z-20 before:absolute before:left-0 before:top-0 before:h-full before:w-full before:bg-[url(/src/assets/images/home/bg-moon-overlay.png)] before:bg-cover before:mix-blend-color before:-z-10 pb-20">
       <NavBar />
       <div className="text-center pt-[7%] z-20">
         <h1>STREEMHUB</h1>
@@ -25,7 +25,7 @@ const Header = () => {
             {searchBtns.map((text, i) => (
               <button
                 key={i}
-                className={`text-xl pt-3 pb-1 lg:px-7 xl:px-9 capitalize ${
+                className={`text-2xl pt-3 pb-1 lg:px-7 xl:px-9 capitalize ${
                   activeBtn === i && 'bg-purple700 font-bold text-purple500'
                 }`}
                 onClick={() => setActiveBtn(i)}
@@ -37,7 +37,7 @@ const Header = () => {
           <form className="relative" onSubmit={(e) => e.preventDefault()}>
             <input
               type="text"
-              className="p-3 px-10 placeholder:text-purple-500 w-full text-xl"
+              className="p-3 px-10 placeholder:text-purple-500 w-full text-2xl"
               placeholder={`Search ${searchBtns[activeBtn]} here`}
               onChange={(e) => setSearch(e.target.value)}
             />
@@ -46,19 +46,19 @@ const Header = () => {
             </button>
           </form>
         </div>
-        <p className="text-lg mt-5">
+        <p className="text-xl mt-5">
           Making the world a better place for teams
         </p>
         <div className="pt-20 flex gap-4 justify-center">
           <Link
             to=""
-            className="text-lg pt-3 pb-2 w-44 border-2 border-solid border-purple500 bg-purple500 rounded-md"
+            className="text-xl pt-3 pb-2 w-44 border-2 border-solid border-purple500 bg-purple500 rounded-md"
           >
             Learn more
           </Link>
           <Link
             to="/signup"
-            className="text-lg pt-3 pb-2 w-44 border-2 border-solid border-white rounded-md"
+            className="text-xl pt-3 pb-2 w-44 border-2 border-solid border-white rounded-md"
           >
             Sign Up
           </Link>

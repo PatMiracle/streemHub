@@ -5,11 +5,11 @@ const Header = () => {
   const [search, setSearch] = useState('')
 
   return (
-    <header className="relative">
+    <header className="relative w-[85%] mx-auto">
       <PostsNavBar />
       {/* banner */}
       <div
-        className="px-24 py-8 mt-4 rounded-[52px] flex justify-between items-center"
+        className="pl-20 pr-10 py-8 mt-4 rounded-[52px] flex justify-between items-center"
         style={{
           background:
             'radial-gradient(73.7% 73.7% at 47.21% 26.3%, #8B0CFF 0%, #C483FF 100%)',
@@ -34,7 +34,7 @@ const Header = () => {
       </div>
       {/* search bar */}
       <form
-        className="flex items-center gap-8 bg-white rounded-[30px] py-7 px-10 absolute -bottom-20 w-[75%] left-1/2 -translate-x-1/2"
+        className="flex items-center gap-8 bg-white rounded-[30px] py-7 px-10 absolute -bottom-20 w-11/12 left-1/2 -translate-x-1/2"
         onSubmit={(e) => e.preventDefault()}
       >
         <span

@@ -1,6 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { AiOutlineGoogle } from 'react-icons/ai'
+import useFormError from '../hooks/useFormError'
+
+const name_regex = /^[A-Za-z]+$/
+const email_regex = /^\w+([\\.-]?\w+)*@\w+([\\.-]?\w+)*(\.\w{2,3})+$/
 
 const SignUp = () => {
   const [firstName, setFirstName] = useState('')
@@ -9,15 +13,12 @@ const SignUp = () => {
   const [password, SetPassword] = useState('')
   const [showPwd, setShowPwd] = useState(false)
   const [agreement, setAgreement] = useState(false)
-  const [formError, setFormError] = useState(false)
+  const { formError, setFormError } = useFormError()
 
   // clear error as input changes
   useEffect(() => {
     setFormError(false)
   }, [firstName, lastName, email, password])
-
-  const name_regex = /^[A-Za-z]+$/
-  const email_regex = /^\w+([\\.-]?\w+)*@\w+([\\.-]?\w+)*(\.\w{2,3})+$/
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -25,23 +26,17 @@ const SignUp = () => {
     if (
       !name_regex.test(firstName) ||
       !name_regex.test(lastName) ||
-      !email_regex.test(email)
+      !email_regex.test(email) ||
+      password.length < 6
     ) {
-      setFormError(true)
-    }
-    if (password.length < 6) {
       setFormError(true)
     }
   }
 
   return (
-    <section className="flex gap-[10%]">
-      <img
-        src="/signup-img.png"
-        alt=""
-        className="min-h-screen object-cover w-[40%]"
-      />
-      <div className="pt-20 w-[40%] relative">
+    <section className="flex">
+      <div className="w-[40%] h-screen fixed left-0 top-0 bg-[url(/src/assets/images/signup-img.png)] bg-cover bg-no-repeat"></div>
+      <div className="pt-20 pb-4 w-[40%] relative left-[50%]">
         {formError && (
           <p className="absolute bg-[#FF1212aa] py-2 px-4 rounded-lg top-7 left-4 backdrop-blur-md">
             Incorrect name, email or password. All passwords must be at
