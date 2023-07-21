@@ -1,6 +1,7 @@
 import NavBar from '../../components/NavBar'
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import searchIcon from '../../assets/vectors/search.svg'
 
 const Header = () => {
   const searchBtns = [
@@ -42,7 +43,7 @@ const Header = () => {
               onChange={(e) => setSearch(e.target.value)}
             />
             <button className="absolute right-3 top-2">
-              <img src="/search.svg" alt="" />
+              <img src={searchIcon} alt="" />
             </button>
           </form>
         </div>
