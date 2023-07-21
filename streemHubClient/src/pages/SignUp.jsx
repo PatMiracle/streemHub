@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { AiOutlineGoogle } from 'react-icons/ai'
-import passwordcheck from '../assets/vectors/passwordcheck.svg'
+import { PasswordCheck } from 'iconsax-react'
 import useFormError from '../hooks/useFormError'
 
 const name_regex = /^[A-Za-z]+$/
@@ -82,7 +82,7 @@ const SignUp = () => {
           />
           {/* password */}
           <div className="relative">
-            <img src={passwordcheck} alt="" className="absolute left-5 top-4" />
+            <PasswordCheck className="absolute left-5 top-4 text-black" />
             <input
               type={showPwd ? 'text' : 'password'}
               className="w-full bg-inputBg py-4 px-16 rounded-lg"

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { IoNotificationsOutline, IoPersonCircle } from 'react-icons/io5'
+import { Notification } from 'iconsax-react'
 import home from '../assets/vectors/home.svg'
 import square from '../assets/vectors/square.svg'
 import community from '../assets/vectors/community.svg'
@@ -23,7 +24,7 @@ const PostsNavBar = () => {
       </div>
       <div className="flex gap-3 items-center">
         <Link className="w-12 h-12 rounded-full grid place-content-center bg-purple600">
-          <IoNotificationsOutline className="text-white" size={30} />
+          <Notification className="text-white" size={30} />
         </Link>
         <Link>
           <IoPersonCircle className="text-purple500" size={56} />
