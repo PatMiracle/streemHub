@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { footerLinks } from '../utils/data'
+import footerLinks from '../utils/footerLinks'
 import { Link } from 'react-router-dom'
 
 const email_regex = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/
