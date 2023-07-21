@@ -1,6 +1,7 @@
+import './style.css'
 import features from '../../utils/homeFeatures'
 import { faq } from '../../utils/data'
-import './style.css'
+import tick from '../../assets/vectors/tick.svg'
 import { MdPlayArrow } from 'react-icons/md'
 
 const Main = () => {
@@ -57,7 +58,7 @@ const Main = () => {
               >
                 <p className="text-3xl">{text}</p>
                 <img
-                  src="/tick.svg"
+                  src={tick}
                   alt=""
                   className="shrink-0 py-3 px-[10px] border border-solid border-purple500 rounded-full w-12"
                 />{' '}
