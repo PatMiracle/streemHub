@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { AiOutlineGoogle } from 'react-icons/ai'
+import userIcon from '../assets/vectors/user.svg'
+import passwordcheck from '../assets/vectors/passwordcheck.svg'
 import useFormError from '../hooks/useFormError'
 
 const user_regex = /^[a-zA-Z][a-zA-Z0-9]{2,}$/
@@ -29,13 +31,9 @@ const Login = () => {
   }
 
   return (
-    <section className="flex gap-[10%]">
-      <img
-        src="/login-img.png"
-        alt=""
-        className="min-h-screen object-cover w-[40%]"
-      />
-      <div className="pt-28 w-[40%] relative">
+    <section>
+      <div className="w-[40%] h-screen fixed left-0 top-0 bg-[url(/src/assets/images/login-img.png)] bg-cover bg-no-repeat"></div>
+      <div className="pt-28 w-[40%] relative left-[50%]">
         {formError && (
           <p className="absolute bg-[#FF1212aa] py-2 px-4 rounded-lg top-7 left-4">
             Incorrect username or password. All passwords must be at
@@ -58,7 +56,7 @@ const Login = () => {
           {/* username */}
           <div className="relative">
             <img
-              src="/user.svg"
+              src={userIcon}
               alt=""
               className="absolute text-black top-4 left-5"
             />
@@ -71,11 +69,7 @@ const Login = () => {
           </div>
           {/* password */}
           <div className="relative">
-            <img
-              src="/passwordcheck.svg"
-              alt=""
-              className="absolute left-5 top-4"
-            />
+            <img src={passwordcheck} alt="" className="absolute left-5 top-4" />
             <input
               type={showPwd ? 'text' : 'password'}
               className="w-full bg-inputBg py-4 px-16 rounded-lg"

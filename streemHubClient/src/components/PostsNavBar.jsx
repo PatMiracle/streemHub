@@ -1,5 +1,8 @@
 import { Link } from 'react-router-dom'
 import { IoNotificationsOutline, IoPersonCircle } from 'react-icons/io5'
+import home from '../assets/vectors/home.svg'
+import square from '../assets/vectors/square.svg'
+import community from '../assets/vectors/community.svg'
 
 const PostsNavBar = () => {
   return (
@@ -9,13 +12,13 @@ const PostsNavBar = () => {
       </Link>
       <div className="flex gap-4 items-center ml-[7%]">
         <Link to="/">
-          <img src="/home.svg" alt="" />
+          <img src={home} alt="" />
         </Link>
         <Link>
-          <img src="/square.svg" alt="" />
+          <img src={square} alt="" />
         </Link>
         <Link>
-          <img src="/community.svg" alt="" />
+          <img src={community} alt="" />
         </Link>
       </div>
       <div className="flex gap-3 items-center">

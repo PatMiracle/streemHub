@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { AiOutlineGoogle } from 'react-icons/ai'
+import passwordcheck from '../assets/vectors/passwordcheck.svg'
 import useFormError from '../hooks/useFormError'
 
 const name_regex = /^[A-Za-z]+$/
@@ -34,7 +35,7 @@ const SignUp = () => {
   }
 
   return (
-    <section className="flex">
+    <section>
       <div className="w-[40%] h-screen fixed left-0 top-0 bg-[url(/src/assets/images/signup-img.png)] bg-cover bg-no-repeat"></div>
       <div className="pt-20 pb-4 w-[40%] relative left-[50%]">
         {formError && (
@@ -81,11 +82,7 @@ const SignUp = () => {
           />
           {/* password */}
           <div className="relative">
-            <img
-              src="/passwordcheck.svg"
-              alt=""
-              className="absolute left-5 top-4"
-            />
+            <img src={passwordcheck} alt="" className="absolute left-5 top-4" />
             <input
               type={showPwd ? 'text' : 'password'}
               className="w-full bg-inputBg py-4 px-16 rounded-lg"

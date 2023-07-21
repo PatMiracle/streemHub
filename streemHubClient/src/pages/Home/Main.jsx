@@ -1,4 +1,5 @@
-import { faq, features } from '../../utils/data'
+import features from '../../utils/homeFeatures'
+import { faq } from '../../utils/data'
 import './style.css'
 import { MdPlayArrow } from 'react-icons/md'
 

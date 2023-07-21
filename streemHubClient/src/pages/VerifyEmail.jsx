@@ -1,14 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import verifyImg from '../assets/images/verify_img.png'
 
 const VerifyEmail = () => {
   return (
     <main>
-      <img
-        src="/verify_img.png"
-        alt=""
-        className="fixed h-screen top-0 left-0"
-      />
+      <img src={verifyImg} alt="" className="fixed h-screen top-0 left-0" />
       <div className="absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]">
         <h2 className="text-5xl font-bold text-left">Verify your email</h2>
         <p className="text-xl py-6">

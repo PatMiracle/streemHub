@@ -1,5 +1,7 @@
 import PostsNavBar from '../../components/PostsNavBar'
 import { useState } from 'react'
+import htmlFolder from '../../assets/images/posts/html-folder.png'
+import folderLink from '../../assets/images/posts/folder-link.png'
 
 const Header = () => {
   const [search, setSearch] = useState('')
@@ -24,9 +26,9 @@ const Header = () => {
           </h2>
         </div>
         <div className="relative">
-          <img src="/posts/html-folder.png" alt="" className="w-[377px]" />
+          <img src={htmlFolder} alt="" className="w-[377px]" />
           <img
-            src="/posts/folder-link.png"
+            src={folderLink}
             alt=""
             className="w-[198px] absolute bottom-12 -left-12"
           />
