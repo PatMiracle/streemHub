@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { IoNotificationsOutline, IoPersonCircle } from 'react-icons/io5'
+import { IoPersonCircle } from 'react-icons/io5'
 import { Notification } from 'iconsax-react'
 import home from '../assets/vectors/home.svg'
 import square from '../assets/vectors/square.svg'
