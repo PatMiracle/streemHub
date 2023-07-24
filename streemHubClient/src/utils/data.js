@@ -31,5 +31,23 @@ const posts = [
     img: true,
   },
 ]
-
-export { faq, posts }
+const notifs = [
+  { notif: 'Leo net like your post ' },
+  {
+    notif: 'Moses commented on your post ',
+    info: "AI, like automation, doesn't eliminate people. It simply changes the nature of our jobs. It makes new jobs possible.",
+  },
+  {
+    notif: 'Moses commented on your post',
+    info: "AI, like automation, doesn't eliminate people. It simply changes the nature of our jobs. It makes new jobs possible.",
+  },
+  {
+    notif: 'Moses commented on your post',
+    info: "AI, like automation, doesn't eliminate people. It simply changes the nature of our jobs. It makes new jobs possible.",
+  },
+  {
+    notif: 'Moses commented on your post',
+    info: "AI, like automation, doesn't eliminate people. It simply changes the nature of our jobs. It makes new jobs possible.",
+  },
+]
+export { faq, posts, notifs }
