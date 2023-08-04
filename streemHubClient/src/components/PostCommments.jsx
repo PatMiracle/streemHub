@@ -1,5 +1,6 @@
 import React from 'react'
 import PostComment from './PostComment'
+import { Image } from 'iconsax-react'
 
 const PostCommments = () => {
   return (
@@ -7,9 +8,12 @@ const PostCommments = () => {
       <div className="h-[1px] w-full bg-purple500"></div>
       {/* add comment */}
       <form className="grid gap-8 py-8">
-        <p className="w-max ml-auto">
-          Add images <img src="/image.svg" alt="" className="inline ml-5" />
-        </p>
+        <button className="w-max ml-auto flex items-center gap-4">
+          Add images{' '}
+          <span className="border rounded-md border-purple500 h-9 w-10 inline-grid place-content-center">
+            <Image color="#8B0CFF" size={20} variant="Bold" />
+          </span>
+        </button>
         <div className="flex gap-8">
           {/* placeholder img */}
           <div className="w-16 h-16 bg-[#D5CECE] rounded-full"></div>
