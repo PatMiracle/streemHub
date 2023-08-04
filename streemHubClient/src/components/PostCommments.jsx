@@ -1,4 +1,3 @@
-import React from 'react'
 import PostComment from './PostComment'
 import { Image } from 'iconsax-react'
 

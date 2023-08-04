@@ -1,4 +1,3 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
 import verifiedImg from '../assets/images/verify_img.png'
 import { Verify } from 'iconsax-react'
