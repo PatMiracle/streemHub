@@ -23,10 +23,13 @@ const PostsNavBar = () => {
         </Link>
       </div>
       <div className="flex gap-3 items-center">
-        <Link className="w-12 h-12 rounded-full grid place-content-center bg-purple600">
+        <Link
+          to="/notifications"
+          className="w-12 h-12 rounded-full grid place-content-center bg-purple600"
+        >
           <Notification className="text-white" size={30} />
         </Link>
-        <Link>
+        <Link to="/profile">
           <IoPersonCircle className="text-purple500" size={56} />
         </Link>
       </div>
