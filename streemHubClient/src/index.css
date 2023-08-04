@@ -3,12 +3,12 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Inter';
-  src: url('./assets/font/Inter-VariableFont.ttf');
+  font-family: 'Railway';
+  src: url('./assets/font/Raleway-VariableFont_wght.ttf');
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Railway', sans-serif;
   background: black;
   color: white;
   overflow-x: hidden;
