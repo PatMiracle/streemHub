@@ -1,4 +1,3 @@
- from 'react'
 import { Link } from 'react-router-dom'
 import verifyImg from '../assets/images/verify_img.png'
 
