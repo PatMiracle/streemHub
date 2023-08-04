@@ -54,30 +54,37 @@ const messages = [
   {
     name: 'Leo.Net',
     text: 'Can you show me the code you used in making the video alignment in the application we are working on ',
+    time: '6:19am',
   },
   {
     name: 'Aya Mason',
     text: 'What programming language can i use to create a text animation for my website ',
+    time: '6:19am',
   },
   {
     name: 'Aya Mason',
     text: 'What programming language can i use to create a text animation for my website ',
+    time: '6:19am',
   },
   {
     name: 'Leo.Net',
     text: 'Can you show me the code you used in making the video alignment in the application we are working on ',
+    time: '6:19am',
   },
   {
     name: 'Aya Mason',
     text: 'What programming language can i use to create a text animation for my website ',
+    time: '6:19am',
   },
   {
     name: 'Leo.Net',
     text: 'Can you show me the code you used in making the video alignment in the application we are working on ',
+    time: '6:19am',
   },
   {
     name: 'Aya Mason',
     text: 'What programming language can i use to create a text animation for my website ',
+    time: '6:19am',
   },
 ]
 export { faq, posts, notifs, messages }
