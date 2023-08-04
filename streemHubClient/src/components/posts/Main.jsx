@@ -1,5 +1,5 @@
 import { FaMicrophone } from 'react-icons/fa'
-import Post from '../../components/Post'
+import Post from '../Post'
 import { posts } from '../../utils/data'
 
 const Main = () => {

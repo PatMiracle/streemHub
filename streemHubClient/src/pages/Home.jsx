@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import Header from './Header'
-import Main from './Main'
-import Footer from '../../components/Footer'
+import Header from '../components/home/Header'
+import Main from '../components/home/Main'
+import Footer from '../components/Footer'
 
 const Home = () => {
   return (

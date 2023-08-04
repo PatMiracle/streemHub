@@ -1,4 +1,4 @@
-import PostsNavBar from '../../components/PostsNavBar'
+import PostsNavBar from '../PostsNavBar'
 import { useState } from 'react'
 import htmlFolder from '../../assets/images/posts/html-folder.png'
 import folderLink from '../../assets/images/posts/folder-link.png'

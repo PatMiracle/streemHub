@@ -1,4 +1,4 @@
-import NavBar from '../../components/NavBar'
+import NavBar from '../NavBar'
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import searchIcon from '../../assets/vectors/search.svg'
