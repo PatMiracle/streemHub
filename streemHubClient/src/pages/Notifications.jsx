@@ -22,10 +22,10 @@ const Notifications = () => {
           {notifs.map(({ notif, info }, i) => {
             return (
               <div
-                className="py-3 pl-6 pr-16 rounded-[20px] flex items-center gap-6 bg-[#1c0233]"
+                className="py-3 pl-6 pr-14 rounded-[20px] flex items-center gap-6 bg-[#1c0233]"
                 key={i}
               >
-                <div className="w-12 h-12 rounded-full bg-inputBg"></div>
+                <div className="w-12 h-12 rounded-full bg-inputBg shrink-0"></div>
                 <div>
                   <h4 className="font-medium">{notif}</h4>
                   {info && <p className="text-sm opacity-50">{info}</p>}
