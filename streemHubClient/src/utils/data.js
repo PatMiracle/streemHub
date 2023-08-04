@@ -50,4 +50,34 @@ const notifs = [
     info: "AI, like automation, doesn't eliminate people. It simply changes the nature of our jobs. It makes new jobs possible.",
   },
 ]
-export { faq, posts, notifs }
+const messages = [
+  {
+    name: 'Leo.Net',
+    text: 'Can you show me the code you used in making the video alignment in the application we are working on ',
+  },
+  {
+    name: 'Aya Mason',
+    text: 'What programming language can i use to create a text animation for my website ',
+  },
+  {
+    name: 'Aya Mason',
+    text: 'What programming language can i use to create a text animation for my website ',
+  },
+  {
+    name: 'Leo.Net',
+    text: 'Can you show me the code you used in making the video alignment in the application we are working on ',
+  },
+  {
+    name: 'Aya Mason',
+    text: 'What programming language can i use to create a text animation for my website ',
+  },
+  {
+    name: 'Leo.Net',
+    text: 'Can you show me the code you used in making the video alignment in the application we are working on ',
+  },
+  {
+    name: 'Aya Mason',
+    text: 'What programming language can i use to create a text animation for my website ',
+  },
+]
+export { faq, posts, notifs, messages }
