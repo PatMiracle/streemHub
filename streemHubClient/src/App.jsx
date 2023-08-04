@@ -5,7 +5,7 @@ import Login from './pages/Login'
 import SignUp from './pages/SignUp'
 import VerifyEmail from './pages/VerifyEmail'
 import Verified from './pages/Verified'
-import DashboardLayout from './components/DashboardLayout'
+import SidebarLayout from './components/SidebarLayout'
 import Profile from './pages/Profile'
 import Notifications from './pages/Notifications'
 import Messages from './pages/Messages'
@@ -20,7 +20,7 @@ const routes = createBrowserRouter([
   { path: '/verified', element: <Verified /> },
   {
     path: '/',
-    element: <DashboardLayout />,
+    element: <SidebarLayout />,
     children: [
       { path: '/profile', element: <Profile /> },
       { path: '/notifications', element: <Notifications /> },
