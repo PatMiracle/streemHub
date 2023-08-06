@@ -5,7 +5,10 @@ import { notifs } from '../utils/data'
 const Notifications = () => {
   return (
     <>
-      <section className="border-[3px] border-purple500 py-7 rounded-[30px]">
+      <section
+        className="border-[3px] border-purple500 py-7 rounded-[30px] h-screen fixed"
+        style={{ width: 'calc(100% - 165px)' }}
+      >
         <div className="flex pl-14 pr-9 pb-5 justify-between items-baseline border-b-[3px] border-b-purple500">
           <div>
             <h3 className="font-medium text-4xl">Notifications</h3>
@@ -18,7 +21,12 @@ const Notifications = () => {
           </div>
         </div>
 
-        <div className="pt-8 px-9 grid gap-3">
+        <div
+          className="pt-8 px-9 grid gap-3 overflow-y-scroll scrollbar-thin"
+          style={{
+            height: 'calc(100vh - 250px)',
+          }}
+        >
           {notifs.map(({ notif, info }, i) => {
             return (
               <div
