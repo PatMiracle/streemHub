@@ -34,13 +34,13 @@ const Main = () => {
         </section>
         {/* video */}
         <section
-          className="w-full min-h-[90vh] rounded-[14px] flex items-center justify-center"
+          className="w-full min-h-[90vh] rounded-[14px] flex items-center justify-center relative after:absolute after:top-0 after:left-0 after:w-full after:h-full after:bg-[url(/src/assets/images/home/bg-moon-overlay.png)] after:mix-blend-color after:z-10"
           style={{
             background:
               'linear-gradient(90deg, #FFFFFF -13.64%, #000000 46.5%, rgba(255, 255, 255, 0.21) 108.16%)',
           }}
         >
-          <div className="w-32 h-32 rounded-full grid place-content-center bg-[#796e85]">
+          <div className="w-32 h-32 rounded-full grid place-content-center bg-[#796e85] z-40 cursor-pointer">
             <MdPlayArrow className="text-inputBg" size={100} />
           </div>
         </section>
