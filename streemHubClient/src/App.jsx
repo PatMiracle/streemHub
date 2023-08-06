@@ -1,4 +1,5 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import ScrollRestore from './components/ScrollRestore'
 import Home from './pages/Home'
 import Posts from './pages/Posts'
 import Login from './pages/Login'
@@ -8,24 +9,42 @@ import Verified from './pages/Verified'
 import SidebarLayout from './components/SidebarLayout'
 import Profile from './pages/Profile'
 import Notifications from './pages/Notifications'
-import Messages from './pages/Messages'
 import Settings from './pages/Settings'
+import MessagesLayout from './components/MessagesLayout'
+import AllMessages from './pages/AllMessages'
+import StarredMessages from './pages/StarredMessages'
+import DeletedMessages from './pages/DeletedMessages'
 
 const routes = createBrowserRouter([
-  { path: '/', element: <Home /> },
-  { path: '/posts', element: <Posts /> },
-  { path: '/login', element: <Login /> },
-  { path: '/signup', element: <SignUp /> },
-  { path: '/verify-email', element: <VerifyEmail /> },
-  { path: '/verified', element: <Verified /> },
   {
     path: '/',
-    element: <SidebarLayout />,
+    element: <ScrollRestore />,
     children: [
-      { path: '/profile', element: <Profile /> },
-      { path: '/notifications', element: <Notifications /> },
-      { path: '/messages', element: <Messages /> },
-      { path: '/settings', element: <Settings /> },
+      { index: true, element: <Home /> },
+      { path: '/posts', element: <Posts /> },
+      { path: '/login', element: <Login /> },
+      { path: '/signup', element: <SignUp /> },
+      { path: '/verify-email', element: <VerifyEmail /> },
+      { path: '/verified', element: <Verified /> },
+      {
+        path: '/',
+        element: <SidebarLayout />,
+        children: [
+          { path: '/profile', element: <Profile /> },
+          { path: '/notifications', element: <Notifications /> },
+          {
+            path: '/messages',
+            element: <MessagesLayout />,
+            children: [
+              { index: true, element: <AllMessages /> },
+              { path: '/messages/all', element: <AllMessages /> },
+              { path: '/messages/starred', element: <StarredMessages /> },
+              { path: '/messages/deleted', element: <DeletedMessages /> },
+            ],
+          },
+          { path: '/settings', element: <Settings /> },
+        ],
+      },
     ],
   },
 ])
