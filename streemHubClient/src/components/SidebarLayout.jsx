@@ -43,13 +43,12 @@ const SidebarLayout = () => {
           )
         })}
       </aside>
-      {/* main */}
-      <main
-        className="absolute left-[85px] p-10"
+      <div
+        className="absolute left-[85px] px-10"
         style={{ width: 'calc(100% - 85px)' }}
       >
-        <div className="flex items-center justify-between relative pb-7">
-          {/* search bar */}
+        {/* search bar */}
+        <div className="flex sticky pt-8 pb-6 top-0 z-20 bg-black items-center justify-between">
           <form
             className="flex items-center gap-4 bg-white rounded-[20px] py-4 px-6  w-8/12"
             onSubmit={(e) => e.preventDefault()}
@@ -101,7 +100,7 @@ const SidebarLayout = () => {
               <MdPlayArrow className="rotate-90 text-purple500" size={23} />
             </div>
             {dropdown && (
-              <div className="grid gap-3 w-[170px] absolute right-0 top-16 bg-[#0000007a]  border border-purple500 rounded-lg cursor-pointer text-sm duration-300 z-50">
+              <div className="grid gap-3 w-[170px] absolute right-0 top-[104px] bg-[#5c5c5c]  border border-purple500 rounded-lg cursor-pointer text-sm duration-300 z-50">
                 <button className="flex gap-4 items-center pt-2 px-3">
                   {' '}
                   <IoPersonCircle className="text-purple500" size={25} />
@@ -117,8 +116,11 @@ const SidebarLayout = () => {
             )}
           </div>
         </div>
-        <Outlet />
-      </main>
+        {/* main */}
+        <main>
+          <Outlet />
+        </main>
+      </div>
     </>
   )
 }
