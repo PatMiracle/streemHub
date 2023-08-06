@@ -32,3 +32,6 @@ h3 {
   font-size: 1.8rem;
   line-height: 2rem;
 }
+.scrollbar-thin::-webkit-scrollbar {
+  width: 3px;
+}
