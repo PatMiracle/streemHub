@@ -32,7 +32,11 @@ const Footer = () => {
               <h3 className="font-bold uppercase text-2xl">{category}</h3>
               <ul className="flex flex-col gap-6 pt-6 capitalize">
                 {list.map(({ text, url }, i) => (
-                  <Link key={i} className="text-xl" to={url}>
+                  <Link
+                    key={i}
+                    className="text-xl hover:text-purple500 hover:font-medium"
+                    to={url}
+                  >
                     {text}
                   </Link>
                 ))}
@@ -51,7 +55,10 @@ const Footer = () => {
                 setEmail(e.target.value)
               }}
             />
-            <p className="text-purple500 text-xs" ref={emailRef}></p>
+            <p
+              className="text-purple500 text-xs font-semibold"
+              ref={emailRef}
+            ></p>
             <button className="bg-purple500 block mt-4 ml-auto py-1 px-4 text-sm rounded-md">
               Send
             </button>
