@@ -1,9 +1,8 @@
-import Header from '/components/home/header'
+import Header from './header'
 import Footer from '/components/footer'
-import Main from '/components/home/main'
+import Main from './main'
 import moonRock from '/public/images/moon_rock.png'
 import Image from 'next/image'
-// import overlay from '../assets/images/home/bg-moon-overlay.png'
 
 export default function Home() {
   return (

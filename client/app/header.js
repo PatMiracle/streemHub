@@ -1,10 +1,11 @@
 'use client'
 
-import NavBar from '../nav'
+import NavBar from '/components/nav'
 import React, { useState } from 'react'
 import Link from 'next/link'
 import searchIcon from '/public/vectors/search.svg'
 import Image from 'next/image'
+import clsx from 'clsx'
 
 const Header = () => {
   const searchBtns = [
@@ -19,7 +20,15 @@ const Header = () => {
   const [search, setSearch] = useState('')
 
   return (
-    <header className="relative after:absolute after:left-0 after:top-0 after:h-full after:min-w-full after:bg-[url(/images/home/bg-moon.png)] after:bg-cover after:bg-no-repeat after:-z-20 before:absolute before:left-0 before:top-0 before:h-full before:w-full before:bg-[url(/images/home/bg-moon-overlay.png)] before:bg-cover before:mix-blend-color before:-z-10 pb-20">
+    <header
+      className={clsx(
+        'relative',
+        // moon image
+        'after:absolute after:left-0 after:top-0 after:h-full after:min-w-full after:bg-[url(/images/home/bg-moon.png)] after:bg-cover after:bg-no-repeat after:-z-20',
+        // purple overlay
+        'before:absolute before:left-0 before:top-0 before:h-full before:w-full before:bg-[url(/images/home/bg-moon-overlay.png)] before:bg-cover before:mix-blend-color before:-z-10 pb-20'
+      )}
+    >
       <NavBar />
       <div className="text-center pt-[7%] z-20">
         <h1>STREEMHUB</h1>

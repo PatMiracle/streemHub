@@ -4,11 +4,20 @@ import { faq } from '/utils/data'
 import tick from '/public/vectors/tick.svg'
 import { MdPlayArrow } from 'react-icons/md'
 import Image from 'next/image'
+import clsx from 'clsx'
 
 const Main = () => {
   return (
     <main className="mt-20">
-      <div className="w-10/12 py-40 mx-auto relative before:absolute before:top-0 before:left-0 before:w-full before:h-[2px] before:bg-purple500 after:absolute after:top-[2px] after:left-0 after:h-48 after:w-[2px] after:bg-purple500">
+      <div
+        className={clsx(
+          'w-10/12 py-40 mx-auto relative',
+          // top horizontal line
+          'before:absolute before:top-0 before:left-0 before:w-full before:h-[2px] before:bg-purple500',
+          // left vertical line
+          'after:absolute after:top-[2px] after:left-0 after:h-48 after:w-[2px] after:bg-purple500'
+        )}
+      >
         {/* features */}
         <div className="absolute -top-6 right-0 bg-black pl-6 after:absolute after:top-24 after:h-[402px] after:w-[2px] after:right-0 after:bg-purple500">
           <h2 className="text-5xl font-bold">Main Features</h2>
@@ -21,7 +30,14 @@ const Main = () => {
               key={i}
             >
               <div
-                className={`${style.text} relative py-8 px-10 rounded-[14px] before:absolute before:w-10 before:h-10 before:border-[3px] before:bg-black before:z-20 before:border-purple500 before:rounded-full before:top-2 after:absolute after:w-[2px] after:h-[600px] after:bg-purple500 after:top-12`}
+                className={clsx(
+                  style.text,
+                  'relative py-8 px-10 rounded-[14px]',
+                  // circle
+                  'before:absolute before:w-10 before:h-10 before:border-[3px] before:bg-black before:z-20 before:border-purple500 before:rounded-full before:top-2',
+                  // vertical line
+                  'after:absolute after:w-[2px] after:h-[600px] after:bg-purple500 after:top-12'
+                )}
               >
                 <h2 className="text-4xl font-bold text-purple500">{title}</h2>
                 <p className="text-xl text-slate-50">{text}</p>
@@ -37,7 +53,7 @@ const Main = () => {
         </section>
         {/* video */}
         <section
-          className="w-full min-h-[90vh] rounded-[14px] flex items-center justify-center relative after:absolute after:top-0 after:left-0 after:w-full after:h-full after:bg-[url(/src/assets/images/home/bg-moon-overlay.png)] after:mix-blend-color after:z-10"
+          className="w-full min-h-[90vh] rounded-[14px] flex items-center justify-center relative after:absolute after:top-0 after:left-0 after:w-full after:h-full after:bg-[url(/images/home/bg-moon-overlay.png)] after:mix-blend-color after:z-10"
           style={{
             background:
               'linear-gradient(90deg, #FFFFFF -13.64%, #000000 46.5%, rgba(255, 255, 255, 0.21) 108.16%)',
