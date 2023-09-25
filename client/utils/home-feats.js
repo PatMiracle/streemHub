@@ -1,8 +1,8 @@
-import books from '../assets/images/home/books.png'
-import projects from '../assets/images/home/projects.png'
-import codes from '../assets/images/home/codes.png'
-import linking from '../assets/images/home/linking.png'
-import filter from '../assets/images/home/filter.png'
+import books from '/public/images/home/books.png'
+import projects from '/public/images/home/projects.png'
+import codes from '/public/images/home/codes.png'
+import linking from '/public/images/home/linking.png'
+import filter from '/public/images/home/filter.png'
 
 const features = [
   {
