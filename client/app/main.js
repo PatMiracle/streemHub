@@ -46,7 +46,7 @@ const Main = () => {
                 style={{ boxShadow: 'inset 0px 4px 40px #000000' }}
                 className="flex-shrink-0 w-64 h-60 rounded-[14px] bg-purple500 grid place-content-center"
               >
-                <Image src={img} alt={title} />
+                <Image src={img} alt={title} priority />
               </div>
             </div>
           ))}

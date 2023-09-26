@@ -5,6 +5,8 @@ import Link from 'next/link'
 import { AiOutlineGoogle } from 'react-icons/ai'
 import { PasswordCheck } from 'iconsax-react'
 import useFormError from '/hooks/useFormError'
+import img from '/public/images/signup-img.png'
+import Image from 'next/image'
 
 const name_regex = /^[A-Za-z]+$/
 const email_regex = /^\w+([\\.-]?\w+)*@\w+([\\.-]?\w+)*(\.\w{2,3})+$/
@@ -38,7 +40,11 @@ const SignUp = () => {
 
   return (
     <section>
-      <div className="w-[40%] h-screen fixed left-0 top-0 bg-[url(/images/signup-img.png)] bg-cover bg-no-repeat"></div>
+      <Image
+        src={img}
+        priority
+        className="w-[40%] h-screen fixed left-0 top-0 object-cover"
+      />
       <div className="pt-20 pb-4 w-[40%] relative left-[50%]">
         {formError && (
           <p className="absolute bg-[#FF1212aa] py-2 px-4 rounded-lg top-7 left-4 backdrop-blur-md">

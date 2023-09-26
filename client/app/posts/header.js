@@ -29,11 +29,12 @@ const Header = () => {
           </h2>
         </div>
         <div className="relative">
-          <Image src={htmlFolder} alt="" className="w-[377px]" />
+          <Image src={htmlFolder} alt="" className="w-[377px]" priority />
           <Image
             src={folderLink}
             alt=""
             className="w-[198px] absolute bottom-12 -left-12"
+            priority
           />
         </div>
       </div>

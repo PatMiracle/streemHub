@@ -20,15 +20,21 @@ const Header = () => {
   const [search, setSearch] = useState('')
 
   return (
-    <header
-      className={clsx(
-        'relative',
-        // moon image
-        'after:absolute after:left-0 after:top-0 after:h-full after:min-w-full after:bg-[url(/images/home/bg-moon.png)] after:bg-cover after:bg-no-repeat after:-z-20',
-        // purple overlay
-        'before:absolute before:left-0 before:top-0 before:h-full before:w-full before:bg-[url(/images/home/bg-moon-overlay.png)] before:bg-cover before:mix-blend-color before:-z-10 pb-20'
-      )}
-    >
+    <header className="relative pb-20">
+      <Image
+        src="/images/home/bg-moon-overlay.png"
+        fill={true}
+        className="absolute left-0 top-0 h-full -z-10 mix-blend-color"
+        priority
+        alt=""
+      />
+      <Image
+        src="/images/home/bg-moon.png"
+        fill={true}
+        className="absolute left-0 top-0 h-full -z-20"
+        priority
+        alt="moon"
+      />
       <NavBar />
       <div className="text-center pt-[7%] z-20">
         <h1>STREEMHUB</h1>

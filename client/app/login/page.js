@@ -5,6 +5,8 @@ import Link from 'next/link'
 import { AiOutlineGoogle } from 'react-icons/ai'
 import { PasswordCheck, User } from 'iconsax-react'
 import useFormError from '/hooks/useFormError'
+import img from '/public//images/login-img.png'
+import Image from 'next/image'
 
 const user_regex = /^[a-zA-Z][a-zA-Z0-9]{2,}$/
 
@@ -33,7 +35,11 @@ const Login = () => {
 
   return (
     <section>
-      <div className="w-[40%] h-screen fixed left-0 top-0 bg-[url(/images/login-img.png)] bg-cover bg-no-repeat"></div>
+      <Image
+        src={img}
+        priority
+        className="w-[40%] h-screen fixed left-0 top-0 object-cover"
+      />
       <div className="pt-28 w-[40%] relative left-[50%]">
         {formError && (
           <p className="absolute bg-[#FF1212aa] py-2 px-4 rounded-lg top-7 left-4">

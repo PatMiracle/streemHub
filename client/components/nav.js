@@ -11,7 +11,14 @@ const NavBar = () => {
   return (
     <nav className="flex gap-6 items-center w-[85%] mx-auto pt-[4%] pb-[3%]">
       <Link href="/">
-        <Image src="/logo.svg" alt="logo" width={56} height={54} />
+        <Image
+          src="/logo.svg"
+          alt="logo"
+          width={56}
+          height={54}
+          priority
+          className="w-auto h-auto"
+        />
       </Link>
       {navLinks.map(({ link, text }, i) => (
         <Link
