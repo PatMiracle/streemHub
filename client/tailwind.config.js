@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['var(--font-railway)'],
+      },
       colors: {
         purple500: '#8B0CFF',
         purple600: '#8B0CFFaa',

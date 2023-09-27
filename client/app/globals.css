@@ -2,13 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: 'Railway';
-  src: url('./railway.ttf');
-}
-
 body {
-  font-family: 'Railway', sans-serif;
   background: black;
   color: white;
   overflow-x: hidden;
