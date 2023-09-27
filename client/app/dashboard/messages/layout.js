@@ -1,6 +1,8 @@
 export const metadata = {
-  template: '%s | Messages',
-  default: 'Messages',
+  title: {
+    template: '%s | Messages',
+    default: 'Messages',
+  },
 }
 
 const MessagesLayout = ({ children }) => {

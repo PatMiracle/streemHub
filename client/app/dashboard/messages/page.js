@@ -1,5 +1,9 @@
 import { messages } from '/utils/data'
 
+export const metadata = {
+  title: 'All',
+}
+
 const AllMessages = () => {
   return (
     <div className="grid gap-3">
