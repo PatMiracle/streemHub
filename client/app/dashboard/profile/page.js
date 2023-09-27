@@ -2,6 +2,10 @@ import { Edit2, Edit, Camera, VideoCircle, Message } from 'iconsax-react'
 import { BsDot } from 'react-icons/bs'
 import { FaMicrophone } from 'react-icons/fa'
 
+export const metadata = {
+  title: 'Profile',
+}
+
 const Profile = () => {
   return (
     <>

@@ -2,6 +2,10 @@ import Header from './header'
 import Main from './main'
 import Footer from '/components/footer'
 
+export const metadata = {
+  title: 'Posts',
+}
+
 const Posts = () => {
   return (
     <>
