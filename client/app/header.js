@@ -61,7 +61,9 @@ const Header = () => {
               onChange={(e) => setSearch(e.target.value)}
             />
             <button className="absolute right-3 top-2">
-              <Image src={searchIcon} alt="" />
+              <Link href='./search'>
+                  <Image src={searchIcon} alt="" />
+              </Link>
             </button>
           </form>
         </div>

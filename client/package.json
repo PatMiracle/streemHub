@@ -13,7 +13,7 @@
     "clsx": "^2.0.0",
     "framer-motion": "^10.16.4",
     "iconsax-react": "^0.0.8",
-    "next": "13.5.2",
+    "next": "^13.5.2",
     "postcss": "8.4.30",
     "react": "18.2.0",
     "react-dom": "18.2.0",
