@@ -2,21 +2,21 @@
 
 import NavBar from '/components/nav'
 import { useState } from 'react'
+import { tags } from '/utils/data'
 import Link from 'next/link'
 import { CgSearch } from 'react-icons/cg'
 import Image from 'next/image'
+import { useRouter } from 'next/navigation'
 
 const Header = () => {
-  const searchBtns = [
-    'books',
-    'projects',
-    'research works',
-    'articles',
-    'codes',
-    'links',
-  ]
   const [activeBtn, setActiveBtn] = useState(0)
   const [search, setSearch] = useState('')
+  const router = useRouter()
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    router.push(`/search?search=${search}&category=${activeBtn}`)
+  }
 
   return (
     <header className="relative pb-20 before:absolute before:w-full before:h-full before:left-0 before:top-0 before:bg-[url(/images/home/bg-moon-overlay.png)] before:-z-10 before:mix-blend-color">
@@ -33,7 +33,7 @@ const Header = () => {
         <div className="w-max mx-auto">
           {/* search center */}
           <div className="flex bg-purple500 mt-10">
-            {searchBtns.map((text, i) => (
+            {tags.map((text, i) => (
               <button
                 key={i}
                 className={`text-2xl pt-3 pb-1 lg:px-7 xl:px-9 capitalize ${
@@ -45,11 +45,11 @@ const Header = () => {
               </button>
             ))}
           </div>
-          <form className="relative" onSubmit={(e) => e.preventDefault()}>
+          <form className="relative" onSubmit={handleSubmit}>
             <input
               type="text"
               className="p-3 pl-10 pr-20 placeholder:text-purple-500 w-full text-2xl"
-              placeholder={`Search ${searchBtns[activeBtn]} here`}
+              placeholder={`Search ${tags[activeBtn]} here`}
               onChange={(e) => setSearch(e.target.value)}
             />
             <button className="absolute right-10 top-2 text-black grid place-content-center">

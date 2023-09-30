@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import VerifyLayout from '../verify-layout'
+import VerifyLayout from '/layouts/verify-layout'
 import { Verify } from 'iconsax-react'
 
 export default function verified() {

@@ -1,12 +1,11 @@
-import Header from './header'
 import Main from './main'
 
-const Search = () => {
-    return (
-        <>
-            <Header />
-            <Main />
-        </>
-    )
+export const metadata = { title: 'Search' }
+
+export default function Search() {
+  return (
+    <>
+      <Main />
+    </>
+  )
 }
-export default Search
