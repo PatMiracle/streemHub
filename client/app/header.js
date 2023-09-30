@@ -23,7 +23,7 @@ const Header = () => {
       <Image
         src="/images/home/bg-moon.png"
         fill={true}
-        className="absolute left-0 top-0 h-full -z-20"
+        className="absolute left-0 top-0 h-full -z-20 animate__animated animate__fadeIn"
         priority
         alt="moon"
       />

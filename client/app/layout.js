@@ -1,4 +1,5 @@
 import './globals.css'
+import 'animate.css'
 import localFont from 'next/font/local'
 
 const railway = localFont({
