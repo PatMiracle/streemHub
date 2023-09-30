@@ -1,11 +1,10 @@
 'use client'
 
 import NavBar from '/components/nav'
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Link from 'next/link'
-import searchIcon from '/public/vectors/search.svg'
+import { CgSearch } from 'react-icons/cg'
 import Image from 'next/image'
-import clsx from 'clsx'
 
 const Header = () => {
   const searchBtns = [
@@ -20,14 +19,7 @@ const Header = () => {
   const [search, setSearch] = useState('')
 
   return (
-    <header className="relative pb-20">
-      <Image
-        src="/images/home/bg-moon-overlay.png"
-        fill={true}
-        className="absolute left-0 top-0 h-full -z-10 mix-blend-color"
-        priority
-        alt=""
-      />
+    <header className="relative pb-20 before:absolute before:w-full before:h-full before:left-0 before:top-0 before:bg-[url(/images/home/bg-moon-overlay.png)] before:-z-10 before:mix-blend-color">
       <Image
         src="/images/home/bg-moon.png"
         fill={true}
@@ -56,12 +48,12 @@ const Header = () => {
           <form className="relative" onSubmit={(e) => e.preventDefault()}>
             <input
               type="text"
-              className="p-3 px-10 placeholder:text-purple-500 w-full text-2xl"
+              className="p-3 pl-10 pr-20 placeholder:text-purple-500 w-full text-2xl"
               placeholder={`Search ${searchBtns[activeBtn]} here`}
               onChange={(e) => setSearch(e.target.value)}
             />
-            <button className="absolute right-3 top-2">
-              <Image src={searchIcon} alt="" />
+            <button className="absolute right-10 top-2 text-black grid place-content-center">
+              <CgSearch size={36} />
             </button>
           </form>
         </div>
