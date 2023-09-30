@@ -32,7 +32,7 @@ const Form = () => {
   }
 
   return (
-    <main className="pt-28 w-[40%] relative left-[50%]">
+    <>
       {formError && (
         <p className="absolute bg-[#FF1212aa] py-2 px-4 rounded-lg top-7 left-4">
           Incorrect username or password. All passwords must be at
@@ -88,7 +88,7 @@ const Form = () => {
             />
             Remember me.
           </label>
-          <Link className="text-purple500" href="">
+          <Link className="text-purple500" href="/login/password-recovery">
             Forgot Password
           </Link>
           <button className="bg-purple500 py-1 px-4 rounded-lg">Login</button>
@@ -100,7 +100,7 @@ const Form = () => {
           Log in with Google
         </span>
       </button>
-    </main>
+    </>
   )
 }
 

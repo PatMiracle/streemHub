@@ -37,7 +37,7 @@ const Form = () => {
   }
 
   return (
-    <main className="pt-20 pb-4 w-[40%] relative left-[50%]">
+    <>
       {formError && (
         <p className="absolute bg-[#FF1212aa] py-2 px-4 rounded-lg top-7 left-4 backdrop-blur-md">
           Incorrect name, email or password. All passwords must be at
@@ -126,7 +126,7 @@ const Form = () => {
           Sign Up with Google
         </span>
       </button>
-    </main>
+    </>
   )
 }
 
