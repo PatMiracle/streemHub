@@ -1,7 +1,7 @@
 'use client'
 
 import AuthLayout from '/layouts/auth-layout'
-import img from '/public//images/login-img.png'
+import img from '/public/images/login-img.png'
 import { PasswordCheck } from 'iconsax-react'
 import { useState } from 'react'
 

@@ -1,6 +1,6 @@
 import AuthLayout from '/layouts/auth-layout'
 import Form from './form'
-import img from '/public//images/login-img.png'
+import img from '/public/images/login-img.png'
 
 const Login = () => {
   return (
