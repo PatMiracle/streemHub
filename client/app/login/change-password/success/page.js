@@ -7,8 +7,9 @@ export default function verified() {
     <VerifyLayout>
       <div className="w-[502px] bg-white rounded-lg flex flex-col items-center justify-center absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] py-20">
         <Verify size="114" color="#8B0CFF" variant="Bold" />
-        <p className="text-black mt-5 mb-11">
-          You have successfully changed your password
+        <p className="text-black mt-5 text-lg text-center mb-11 font-medium">
+          You have successfully
+          <br /> changed your password
         </p>
         <Link
           href="/login"
