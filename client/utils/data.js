@@ -87,4 +87,78 @@ const messages = [
     time: '6:19am',
   },
 ]
-export { faq, posts, notifs, messages }
+
+import searchImg1 from '/public/images/search/search-img.png'
+import searchImg2 from '/public/images/search/search-img.png'
+import searchImg3 from '/public/images/search/search-img.png'
+import searchImg4 from '/public/images/search/search-img.png'
+import searchImg5 from '/public/images/search/search-img.png'
+import searchImg6 from '/public/images/search/search-img.png'
+
+const searchResults = [
+  {
+    id: 1,
+    searchImg: searchImg1,
+    name: 'Name of Book',
+    author: 'Author'
+  },
+  {
+    id: 2,
+    searchImg: searchImg2,
+    name: 'Name of Book',
+    author: 'Author'
+  },
+  {
+    id: 3,
+    searchImg: searchImg3,
+    name: 'Name of Book',
+    author: 'Author'
+  },
+  {
+    id: 4,
+    searchImg: searchImg4,
+    name: 'Name of Book',
+    author: 'Author'
+  },
+  {
+    id: 5,
+    searchImg: searchImg5,
+    name: 'Name of Book',
+    author: 'Author'
+  },
+  {
+    id: 6,
+    searchImg: searchImg6,
+    name: 'Name of Book',
+    author: 'Author'
+  }
+]
+
+const tags = [
+  {
+      id: 1,
+      tagName: 'Books'
+  },
+  {
+      id: 2,
+      tagName: 'Projects'
+  },
+  {
+      id: 3,
+      tagName: 'Research works'
+  },
+  {
+      id: 4,
+      tagName: 'Articles'
+  },
+  {
+      id: 5,
+      tagName: 'Codes'
+  },
+  {
+      id: 6,
+      tagName: 'Links'
+  }
+]
+
+export { faq, posts, notifs, messages, searchResults, tags }
