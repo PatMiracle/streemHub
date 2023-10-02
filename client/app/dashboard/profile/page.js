@@ -12,7 +12,7 @@ const Profile = () => {
       <section>
         <div className="relative">
           <div className="bg-inputBg w-full h-56 rounded-lg"></div>
-          <button className="absolute bottom-3 right-5 bg-[#0000007a] py-1 px-3 rounded-md">
+          <button className="absolute bottom-3 right-5 bg-grey py-1 px-3 rounded-md">
             Edit Cover photo <Edit className="inline" />
           </button>
         </div>
@@ -25,10 +25,10 @@ const Profile = () => {
             <div className="flex items-center gap-2">
               <h3>Bob Willer</h3>
               <BsDot className="text-purple500" size={44} />
-              <span className="opacity-50">Frontend Web Developer </span>
+              <span className="text-grey">Frontend Web Developer </span>
               <Edit2 className="inline text-purple500" />
             </div>
-            <p className="opacity-50">
+            <p className="text-grey">
               I am a dedicated and passionate frontend developer, constantly
               pushing the boundaries of what is possible in web development.
             </p>
@@ -46,13 +46,13 @@ const Profile = () => {
                 React
               </span>
             </div>
-            <p className="opacity-50">Joined August 2022</p>
+            <p className="text-grey">Joined August 2022</p>
             <p className="flex gap-5 pt-3">
               <span>
-                30 <span className="opacity-50">followers</span>
+                30 <span className="text-grey">followers</span>
               </span>
               <span>
-                10 <span className="opacity-50">following</span>
+                10 <span className="text-grey">following</span>
               </span>
             </p>
           </div>

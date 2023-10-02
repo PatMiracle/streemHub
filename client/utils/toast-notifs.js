@@ -12,6 +12,7 @@ export const notifySuccess = (message, position = 'top-center') => {
     theme: 'colored',
     icon: false,
     progressClassName: 'bg-purple500',
+    bodyClassName: 'text-purple500 text-lg',
   })
 }
 export const notifyFailed = (message, position = 'top-center') => {
@@ -26,5 +27,6 @@ export const notifyFailed = (message, position = 'top-center') => {
     theme: 'colored',
     icon: false,
     progressClassName: 'bg-[#ff1212]',
+    bodyClassName: 'text-[#ff1212] text-lg',
   })
 }
