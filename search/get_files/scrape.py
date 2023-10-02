@@ -11,7 +11,7 @@ from pathlib import Path
 
 
 
-def scrape(url, download_folder):
+def scrape(url, download_folder=f'{str(Path(__file__).resolve().parent)}'):
     kwargs = {'bypass_robots': True, 'project_name': 'scraped_files', 'open_in_browser':False}
     get_path = f'{str(Path(__file__).resolve().parent)}\scraped_files\{str(url).split("/")[2]}'
     dump_path = f'{str(Path(__file__).resolve().parent)}/zipped_files/{str(url).split("/")[2]}'
