@@ -1,5 +1,7 @@
+import img from '/public/images/login-img.png'
 import Image from 'next/image'
-export default function AuthLayout({ img, children }) {
+
+export default function ImgForm({ children }) {
   return (
     <>
       <Image

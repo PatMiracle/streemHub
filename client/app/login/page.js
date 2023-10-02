@@ -1,13 +1,10 @@
-import AuthLayout from '/layouts/auth-layout'
+import ImgForm from './img-form-layout'
 import Form from './form'
-import img from '/public/images/login-img.png'
 
-const Login = () => {
+export default function Login() {
   return (
-    <AuthLayout img={img}>
+    <ImgForm>
       <Form />
-    </AuthLayout>
+    </ImgForm>
   )
 }
-
-export default Login

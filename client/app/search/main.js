@@ -16,7 +16,7 @@ const Main = () => {
   const inputRef = useRef(null)
 
   useEffect(() => {
-    inputRef.current.focus()
+    if (!searchItem) inputRef.current.focus()
   }, [])
 
   const searchItems = searchResults.map((item) => (
