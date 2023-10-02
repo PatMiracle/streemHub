@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
       <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
       <body>
         {children}
-        <ToastContainer limit={2} />
+        <ToastContainer />
       </body>
     </html>
   )
