@@ -7,6 +7,9 @@ body {
   color: white;
   overflow-x: hidden;
 }
+::selection {
+  background: #330e55;
+}
 input {
   color: black;
 }

@@ -15,6 +15,7 @@ module.exports = {
         purple600: '#8B0CFFaa',
         purple700: '#300259',
         inputBg: '#d9d9d9',
+        grey: '#979595',
       },
       screens: {
         lg: '992px',
