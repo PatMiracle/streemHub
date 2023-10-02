@@ -1,4 +1,7 @@
 import uuid
+from passlib.context import CryptContext
+
+PWD_CONTEXT = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 def generate_id():
     created_id = 0
@@ -7,4 +10,5 @@ def generate_id():
         created_id += 1
         return id_generated
     
-print(generate_id())
+def hash_password(password):
+    return PWD_CONTEXT.hash(password)

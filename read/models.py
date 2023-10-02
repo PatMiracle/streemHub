@@ -19,7 +19,7 @@ class Scrape(models.Model):
         return super().save(*args, **kwargs)
 
 class Book(models.Model):
-    id = models.AutoField(primary_key=True, max_length=128)
+    id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=255)
     author = models.CharField(max_length=255)
     summary = models.TextField(max_length=255)
