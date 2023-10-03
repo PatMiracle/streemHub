@@ -1,7 +1,7 @@
 'use client'
 
-import AuthLayout from '/layouts/auth-layout'
-import img from '/public//images/login-img.png'
+import ImgForm from '../img-form-layout'
+import img from '/public/images/login-img.png'
 import { User } from 'iconsax-react'
 import { useEffect, useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
@@ -28,7 +28,7 @@ const Login = () => {
   }
 
   return (
-    <AuthLayout img={img}>
+    <ImgForm>
       <form onSubmit={handleSubmit} className="grid gap-5">
         <h1 className="font-bold">Password recovery</h1>
         <p>Enter your email to recover your password</p>
@@ -46,7 +46,7 @@ const Login = () => {
           Recover password
         </button>
       </form>
-    </AuthLayout>
+    </ImgForm>
   )
 }
 

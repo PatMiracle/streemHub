@@ -1,7 +1,6 @@
 'use client'
 
-import AuthLayout from '/layouts/auth-layout'
-import img from '/public//images/login-img.png'
+import ImgForm from '../img-form-layout'
 import { PasswordCheck } from 'iconsax-react'
 import { useState } from 'react'
 
@@ -10,7 +9,7 @@ const ChangePassword = () => {
   const [confirmPswd, setConfirmPswd] = useState('')
 
   return (
-    <AuthLayout img={img}>
+    <ImgForm>
       <form>
         <h1 className="text-5xl font-bold">Change your password</h1>
         <p className="pt-5 pb-8">Enter your new password here</p>
@@ -36,7 +35,7 @@ const ChangePassword = () => {
           Change password
         </button>
       </form>
-    </AuthLayout>
+    </ImgForm>
   )
 }
 

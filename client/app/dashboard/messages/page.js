@@ -2,7 +2,7 @@ import { messages } from '/utils/data'
 
 const AllMessages = () => {
   return (
-    <div className="grid gap-3">
+    <div className="grid gap-3 px-8">
       {messages.map(({ name, text, time }, i) => {
         return (
           <div
@@ -12,11 +12,9 @@ const AllMessages = () => {
             <div className="w-9 h-9 rounded-full bg-inputBg shrink-0"></div>
             <div>
               <h4 className="font-medium text-sm">{name}</h4>
-              <p className="opacity-50 text-xs">{text}</p>
+              <p className="text-grey text-xs">{text}</p>
             </div>
-            <span className="font-light text-xs opacity-50 ml-auto">
-              {time}
-            </span>
+            <span className="font-light text-xs text-grey ml-auto">{time}</span>
           </div>
         )
       })}

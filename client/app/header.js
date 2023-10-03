@@ -19,7 +19,14 @@ const Header = () => {
   }
 
   return (
-    <header className="relative pb-20 before:absolute before:w-full before:h-full before:left-0 before:top-0 before:bg-[url(/images/home/bg-moon-overlay.png)] before:-z-10 before:mix-blend-color">
+    <header className="relative pb-20">
+      <Image
+        src="/images/home/bg-moon-overlay.png"
+        fill={true}
+        className="absolute left-0 top-0 h-full -z-10 mix-blend-color"
+        priority
+        alt=""
+      />
       <Image
         src="/images/home/bg-moon.png"
         fill={true}

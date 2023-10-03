@@ -15,9 +15,7 @@ const Notifications = () => {
         <div className="flex pl-14 pr-9 pb-5 justify-between items-baseline border-b-[3px] border-b-purple500">
           <div>
             <h3 className="font-medium text-4xl">Notifications</h3>
-            <p className="opacity-50 text-xl font-light">
-              Manage Notifications
-            </p>
+            <p className="text-grey text-xl font-light">Manage Notifications</p>
           </div>
           <div className="text-[#808080] text-xl font-light rounded-lg border border-purple500 py-2 px-3">
             June <MdPlayArrow className="rotate-90 inline text-purple500" />
@@ -39,9 +37,9 @@ const Notifications = () => {
                 <div className="w-12 h-12 rounded-full bg-inputBg shrink-0"></div>
                 <div>
                   <h4 className="font-medium">{notif}</h4>
-                  {info && <p className="text-sm opacity-50">{info}</p>}
+                  {info && <p className="text-sm text-grey">{info}</p>}
                 </div>
-                <span className="font-light text-xl opacity-50 ml-auto">
+                <span className="font-light text-xl text-grey ml-auto">
                   10min ago
                 </span>
               </div>

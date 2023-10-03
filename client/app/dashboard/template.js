@@ -36,7 +36,7 @@ const DashboardLayout = ({ children }) => {
               key={i}
               href={url}
               className={`w-14 mx-auto h-14 rounded-full grid place-content-center ${
-                pathname === url
+                pathname.includes(url)
                   ? 'bg-black text-purple500'
                   : 'text-black hover:bg-black hover:text-purple500'
               }`}

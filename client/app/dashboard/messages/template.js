@@ -56,7 +56,7 @@ const MessagesTemplate = ({ children }) => {
         </aside>
         {/* Outlet  */}
         <div
-          className="py-9 px-8 overflow-y-scroll scrollbar-thin"
+          className="py-9 overflow-y-scroll scrollbar-thin"
           style={{
             width: 'calc(100% - 240px)',
             height: 'calc(100vh - 125px)',
