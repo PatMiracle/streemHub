@@ -7,13 +7,11 @@ body {
   color: white;
   overflow-x: hidden;
 }
-<<<<<<< HEAD
 
-=======
 ::selection {
   background: #330e55;
 }
->>>>>>> 8aea9ba2bd97ebf543b7781fa3205be96f39c878
+
 input {
   color: black;
 }
