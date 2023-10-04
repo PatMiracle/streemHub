@@ -131,37 +131,37 @@ const tags = [
 ]
 
 import { FaMicrophone } from 'react-icons/fa'
-import {Camera, VideoCircle, MessageQuestion, Image} from 'iconsax-react'
+import { Camera, VideoCircle, MessageQuestion, Image } from 'iconsax-react'
 const iconsInputs = [
   {
     id: 1,
-    icon: <Camera className="text-purple500 opacity-75 px-[0.35rem] py-[0.35rem] rounded-lg border-[1px] border-purple500 cursor-pointer" size={45} />,
+    icon: <Camera size={30} />,
     idName: 'camera',
     fileType: 'image/*',
   },
   {
     id: 2,
-    icon: <VideoCircle className="text-purple500 opacity-75 px-[0.35rem] py-[0.35rem] rounded-lg border-[1px] border-purple500 cursor-pointer" size={45} />,
+    icon: <VideoCircle size={30} />,
     idName: 'video',
     fileType: 'video/*',
   },
   {
     id: 3,
-    icon: <MessageQuestion className="text-purple500 opacity-75 px-[0.35rem] py-[0.35rem] rounded-lg border-[1px] border-purple500 cursor-pointer" size={45} />,
+    icon: <MessageQuestion size={30} />,
     idName: 'message',
     fileType: 'text/*',
   },
   {
     id: 4,
-    icon: <FaMicrophone className="text-purple500 opacity-75 px-[0.35rem] py-[0.35rem] rounded-lg border-[1px] border-purple500 cursor-pointer" size={45} />,
+    icon: <FaMicrophone size={30} />,
     idName: 'audio',
     fileType: 'audio/*',
   },
   {
     id: 5,
-    icon: <Image className="text-purple500 opacity-75 px-[0.35rem] py-[0.35rem] rounded-lg border-[1px] border-purple500 cursor-pointer" size={45} />,
+    icon: <Image size={30} />,
     idName: 'image',
     fileType: 'image/*',
-  }
+  },
 ]
 export { faq, posts, notifs, messages, searchResults, tags, iconsInputs }

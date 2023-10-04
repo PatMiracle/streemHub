@@ -8,17 +8,16 @@ import PostCommments from '/components/post-comments'
 const Post = ({ name, text, img }) => {
   const [isLike, setIsLike] = useState(false)
   const [showComments, setShowComments] = useState(false)
-
   return (
     <div>
       <div className="flex gap-9 items-center">
-        <div className="w-28 h-28 bg-[#D5CECE] rounded-full"></div>
-        <h2 className="font-bold text-4xl">{name}</h2>
+        <div className="w-16 h-16 bg-[#D5CECE] rounded-full"></div>
+        <h2 className="font-bold text-3xl">{name}</h2>
       </div>
-      <div className="w-[80%] ml-36">
-        <p className="text-3xl mb-9">{text}</p>
+      <div className="w-[80%] ml-[6.25rem]">
+        <p className="text-2xl mb-9">{text}</p>
         {img && (
-          <div className="w-full h-[500px] bg-[#979595] opacity-30 rounded-[30px]"></div>
+          <div className="w-full h-[400px] bg-[#979595] opacity-30 rounded-[30px]"></div>
         )}
         <div className="flex gap-6 ml-auto w-max py-4">
           <span className="text-xl flex items-end gap-2">
