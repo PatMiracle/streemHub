@@ -31,12 +31,14 @@ const Footer = () => {
         {footerLinks.map(({ category, list }, i) => {
           return (
             <div key={i}>
-              <h3 className="font-bold uppercase text-2xl">{category}</h3>
+              <h3 className="font-bold uppercase lg:text-xl xl:text-2xl">
+                {category}
+              </h3>
               <ul className="flex flex-col gap-6 pt-6 capitalize">
                 {list.map(({ text, url }, i) => (
                   <Link
                     key={i}
-                    className="text-xl hover:text-purple500 hover:font-medium"
+                    className="lg:text-lg xl:text-xl hover:text-purple500 hover:font-medium"
                     href={url}
                   >
                     {text}
@@ -47,11 +49,13 @@ const Footer = () => {
           )
         })}
         <div>
-          <h3 className="font-bold uppercase text-2xl">subscribe</h3>
+          <h3 className="font-bold uppercase lg:text-xl xl:text-2xl">
+            subscribe
+          </h3>
           <form onSubmit={handleEmailSubmit}>
             <input
               type="text"
-              className="rounded-md text-black py-2 px-3 mt-6"
+              className="rounded-md text-black py-2 px-3 mt-6 lg:text-sm xl:text-base"
               placeholder="Enter email address"
               onChange={(e) => {
                 setEmail(e.target.value)

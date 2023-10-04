@@ -23,17 +23,23 @@ const NavBar = () => {
       {navLinks.map(({ link, text }, i) => (
         <Link
           href={link}
-          className="text-xl capitalize hover:text-gray-100"
+          className="lg:text-lg xl:text-xl capitalize hover:text-gray-100"
           key={i}
         >
           {text}
         </Link>
       ))}
       <div className="ml-auto">
-        <Link className="bg-black px-5 py-3 text-xl" href="/login">
+        <Link
+          className="bg-black px-5 py-3 lg:text-lg xl:text-xl"
+          href="/login"
+        >
           Login
         </Link>
-        <Link className="bg-white text-black px-5 py-3 text-xl" href="/signup">
+        <Link
+          className="bg-white text-black px-5 py-3 lg:text-lg xl:text-xl"
+          href="/signup"
+        >
           Sign up
         </Link>
       </div>

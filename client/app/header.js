@@ -36,14 +36,14 @@ const Header = () => {
       />
       <NavBar />
       <div className="text-center pt-[7%] z-20">
-        <h1>STREEMHUB</h1>
+        <h1 className="lg:text-5xl">STREEMHUB</h1>
         <div className="w-max mx-auto">
           {/* search center */}
           <div className="flex bg-purple500 mt-10">
             {tags.map((text, i) => (
               <button
                 key={i}
-                className={`text-2xl pt-3 pb-1 lg:px-7 xl:px-9 capitalize ${
+                className={`lg:text-xl xl:text-2xl pt-3 pb-1 lg:px-7 xl:px-9 capitalize ${
                   activeBtn === i ? 'bg-purple700 font-bold text-purple500' : ''
                 }`}
                 onClick={() => setActiveBtn(i)}
@@ -55,7 +55,7 @@ const Header = () => {
           <form className="relative" onSubmit={handleSubmit}>
             <input
               type="text"
-              className="p-3 pl-10 pr-20 placeholder:text-purple-500 w-full text-2xl"
+              className="p-3 pl-10 pr-20 placeholder:text-purple-500 w-full lg:text-xl xl:text-2xl"
               placeholder={`Search ${tags[activeBtn]} here`}
               onChange={(e) => setSearch(e.target.value)}
             />
@@ -70,13 +70,13 @@ const Header = () => {
         <div className="pt-20 flex gap-4 justify-center">
           <Link
             href=""
-            className="text-xl pt-3 pb-2 w-44 border-2 border-solid border-purple500 bg-purple500 rounded-md"
+            className="lg:text-lg xl:text-xl pt-3 pb-2 lg:w-40 xl:w-44 border-2 border-solid border-purple500 bg-purple500 rounded-md"
           >
             Learn more
           </Link>
           <Link
             href="/signup"
-            className="text-xl pt-3 pb-2 w-44 border-2 border-solid border-white rounded-md"
+            className="lg:text-lg xl:text-xl pt-3 pb-2 lg:w-40 xl:w-44 border-2 border-solid border-white rounded-md"
           >
             Sign Up
           </Link>

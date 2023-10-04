@@ -10,11 +10,11 @@ export default function Home() {
       <Header />
       <Main />
       <div className="relative">
-        <div className="pt-56">
+        <div className="lg:pt-48 xl:pt-56">
           <Image
             src={moonRock}
             alt=""
-            className="absolute w-full h-[1100px] object-cover bottom-0 -z-30"
+            className="absolute w-full lg:h-[992px] xl:h-[1100px] object-cover bottom-0 -z-30"
           />
           <div
             style={{

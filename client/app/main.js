@@ -20,8 +20,10 @@ const Main = () => {
       >
         {/* features */}
         <div className="absolute -top-6 right-0 bg-black pl-6 after:absolute after:top-24 after:h-[402px] after:w-[2px] after:right-0 after:bg-purple500">
-          <h2 className="text-5xl font-bold">Main Features</h2>
-          <p className="text-xl">Here are some of our main features</p>
+          <h2 className="lg:text-4xl xl:text-5xl font-bold">Main Features</h2>
+          <p className="lg:text-lg xl:text-xl">
+            Here are some of our main features
+          </p>
         </div>
         <section className="grid gap-10 px-10 pb-16">
           {features.map(({ title, text, img }, i) => (
@@ -32,19 +34,21 @@ const Main = () => {
               <div
                 className={clsx(
                   style.text,
-                  'relative py-8 px-10 rounded-[14px]',
+                  'relative py-6 lg:px-8 xl:px-10 rounded-[14px]',
                   // circle
-                  'before:absolute before:w-10 before:h-10 before:border-[3px] before:bg-black before:z-20 before:border-purple500 before:rounded-full before:top-2',
+                  'before:absolute before:w-9 before:h-9 before:border-[3px] before:bg-black before:z-20 before:border-purple500 before:rounded-full before:top-2',
                   // vertical line
-                  'after:absolute after:w-[2px] after:h-[600px] after:bg-purple500 after:top-12'
+                  'after:absolute after:w-[2px] after:h-[600px] after:bg-purple500 after:top-11'
                 )}
               >
-                <h2 className="text-4xl font-bold text-purple500">{title}</h2>
-                <p className="text-xl text-slate-50">{text}</p>
+                <h3 className="font-bold lg:text-3xl xl:text-4xl text-purple500">
+                  {title}
+                </h3>
+                <p className="xl:text-lg text-slate-50">{text}</p>
               </div>
               <div
                 style={{ boxShadow: 'inset 0px 4px 40px #000000' }}
-                className="flex-shrink-0 w-64 h-60 rounded-[14px] bg-purple500 grid place-content-center"
+                className="flex-shrink-0 lg:w-56 lg:h-52 xl:w-60 xl:h-56 rounded-[14px] bg-purple500 grid place-content-center"
               >
                 <Image src={img} alt={title} priority />
               </div>
@@ -75,16 +79,16 @@ const Main = () => {
                   background: 'linear-gradient(#1e053d, #7411cd)',
                 }}
               >
-                <p className="text-3xl">{text}</p>
+                <p className="text-2xl">{text}</p>
                 <Image
                   src={tick}
                   alt=""
-                  className="shrink-0 py-3 px-[10px] border border-solid border-purple500 rounded-full w-12"
+                  className="shrink-0 py-3 px-[10px] border border-solid border-purple500 rounded-full lg:w-8 xl:w-12"
                 />{' '}
               </div>
             )
           })}
-          <button className="flex items-center gap-8 bg-[#5b09ae] rounded-xl px-6 py-2 text-2xl mt-10">
+          <button className="flex items-center gap-7 bg-[#5b09ae] rounded-xl px-6 py-2 text-xl mt-10">
             <span>See More</span>
             <MdPlayArrow className="rotate-90" />
           </button>
