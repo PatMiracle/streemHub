@@ -6,7 +6,7 @@ import { posts } from '/utils/data'
 
 const Main = () => {
   return (
-    <main className="py-48 w-[85%] mx-auto">
+    <main className="lg:py-40 xl:py-48 w-[85%] mx-auto">
       <CreatePost />
       {/* posts */}
       <section className="pt-24 pb-10">
