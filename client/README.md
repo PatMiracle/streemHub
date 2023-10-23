@@ -25,6 +25,4 @@ npm run dev
 
 ## Live Site
 
-[https://streemhub-ai.netlify.app/](https://streemhub-ai.netlify.app/)
-
 [https://streem-hub.vercel.app/](https://streem-hub.vercel.app/)
