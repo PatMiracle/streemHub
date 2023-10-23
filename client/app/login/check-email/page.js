@@ -12,7 +12,7 @@ const CheckEmail = () => {
     if (!email) {
       router.push('/login')
     }
-  }, [])
+  }, [email, router])
 
   return (
     <VerifyLayout>

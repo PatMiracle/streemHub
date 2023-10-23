@@ -17,7 +17,7 @@ const Main = () => {
 
   useEffect(() => {
     if (!searchItem) inputRef.current.focus()
-  }, [])
+  }, [searchItem])
 
   const searchItems = searchResults.map((item) => (
     <div key={item.id} className="grid gap-3">

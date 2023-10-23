@@ -21,7 +21,7 @@ const Form = () => {
   // clear error as input changes
   useEffect(() => {
     setFormError(false)
-  }, [firstName, lastName, email, password])
+  }, [firstName, lastName, email, password, setFormError])
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -63,6 +63,7 @@ const Form = () => {
             type="text"
             className="w-full bg-inputBg py-4 px-10 rounded-lg"
             placeholder="First Name"
+            value={firstName}
             onChange={(e) => setFirstName(e.target.value)}
           />
           {/* last Name */}
@@ -70,6 +71,7 @@ const Form = () => {
             type="text"
             className="w-full bg-inputBg py-4 px-10 rounded-lg"
             placeholder="Last Name"
+            value={lastName}
             onChange={(e) => setLastName(e.target.value)}
           />
         </div>
@@ -78,6 +80,7 @@ const Form = () => {
           type="text"
           className="w-full bg-inputBg py-4 px-10 rounded-lg"
           placeholder="Email"
+          value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
         {/* password */}
@@ -87,6 +90,7 @@ const Form = () => {
             type={showPwd ? 'text' : 'password'}
             className="w-full bg-inputBg py-4 px-16 rounded-lg"
             placeholder="Password"
+            value={password}
             onChange={(e) => SetPassword(e.target.value)}
           />
           <span
@@ -102,6 +106,7 @@ const Form = () => {
               type="checkbox"
               id="agree"
               className="[&:not(input:checked)]:appearance-none rounded-sm outline-none bg-black accent-purple500 h-4 w-4 border mr-2"
+              checked={agreement}
               onChange={(e) => setAgreement(e.target.checked)}
             />
             I Agree with{' '}

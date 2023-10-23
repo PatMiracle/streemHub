@@ -16,8 +16,9 @@ const PostComment = () => {
         <p className="text-xl">
           “The sad thing about artificial intelligence is that it lacks artifice
           and therefore intelligence.” “Forget artificial intelligence – in the
-          brave new world of big data, it's artificial idiocy we should be
-          looking out for.” “Before we work on artificial intelligence why don't
+          brave new world of big data, {"it's"} artificial idiocy we should be
+          looking out for.” “Before we work on artificial intelligence why{' '}
+          {"don't"}
           we do something about natural stupidity?”
         </p>
         <div className="pt-10 flex items-end gap-3">

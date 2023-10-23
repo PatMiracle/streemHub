@@ -10,6 +10,7 @@ const PostCommments = () => {
         <button className="w-max ml-auto flex items-center gap-4">
           Add images{' '}
           <span className="border rounded-md border-purple500 h-9 w-10 inline-grid place-content-center">
+            {/* eslint-disable-next-line jsx-a11y/alt-text */}
             <Image color="#8B0CFF" size={20} variant="Bold" />
           </span>
         </button>

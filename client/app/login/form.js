@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { AiOutlineGoogle } from 'react-icons/ai'
 import { PasswordCheck, User } from 'iconsax-react'
@@ -18,7 +18,7 @@ const Form = () => {
   // clear error as input changes
   useEffect(() => {
     setFormError(false)
-  }, [username, password])
+  }, [username, password, setFormError])
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -42,7 +42,7 @@ const Form = () => {
       )}
       <h2 className="font-bold text-5xl">Login</h2>
       <p className="pt-5">
-        Don't have an account?
+        {"Don't"} have an account?
         <Link className="text-purple500" href="/signup">
           {' '}
           Sign Up
@@ -59,6 +59,7 @@ const Form = () => {
             type="text"
             className="w-full bg-inputBg py-4 px-16 rounded-lg"
             placeholder="Username"
+            value={username}
             onChange={(e) => setUsername(e.target.value)}
           />
         </div>
@@ -69,6 +70,7 @@ const Form = () => {
             type={showPwd ? 'text' : 'password'}
             className="w-full bg-inputBg py-4 px-16 rounded-lg"
             placeholder="Password"
+            value={password}
             onChange={(e) => SetPassword(e.target.value)}
           />
           <span
@@ -84,6 +86,7 @@ const Form = () => {
               type="checkbox"
               id="remember"
               className="[&:not(input:checked)]:appearance-none rounded-sm outline-none bg-black accent-purple500 h-4 w-4 border mr-2"
+              checked={remember}
               onChange={(e) => setRemember(e.target.checked)}
             />
             Remember me.

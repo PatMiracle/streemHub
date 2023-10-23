@@ -13,6 +13,7 @@ import square from '/public/vectors/square.svg'
 import community from '/public/vectors/community.svg'
 import { IoPersonCircle } from 'react-icons/io5'
 import { MdPlayArrow } from 'react-icons/md'
+import { Image } from 'next/image'
 
 const sidebar = [
   { icon: <Profile size={30} />, url: '/dashboard/profile' },
@@ -88,10 +89,10 @@ const DashboardLayout = ({ children }) => {
           </form>
           <div className="flex items-center gap-5">
             <Link href="">
-              <img src={square} alt="" className="w-7" />
+              <Image src={square} alt="" className="w-7" />
             </Link>
             <Link href="">
-              <img src={community} alt="" className="w-8" />
+              <Image src={community} alt="" className="w-8" />
             </Link>
             {/* dropdown */}
             <div
