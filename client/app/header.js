@@ -7,6 +7,7 @@ import Link from 'next/link'
 import { CgSearch } from 'react-icons/cg'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
+import { motion } from 'framer-motion'
 
 const Header = () => {
   const [activeBtn, setActiveBtn] = useState(0)
@@ -36,7 +37,16 @@ const Header = () => {
       />
       <NavBar />
       <div className="text-center pt-[7%] z-20">
-        <h1 className="lg:text-5xl">STREEMHUB</h1>
+        <motion.h1
+          initial={{ scale: 0.6 }}
+          whileInView={{
+            scale: 1,
+            transition: { ease: 'easeInOut', duration: 0.65 },
+          }}
+          className="lg:text-5xl xl:text-6xl"
+        >
+          STREEMHUB
+        </motion.h1>
         <div className="w-max mx-auto">
           {/* search center */}
           <div className="flex bg-purple500 mt-10">
