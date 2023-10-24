@@ -1,9 +1,9 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
-import PostsNavBar from '/components/post-nav'
+import PostsNavBar from '@/components/post-nav'
 import { SearchNormal, DocumentFilter } from 'iconsax-react'
-import { searchResults, tags } from '/utils/data'
+import { searchResults, tags } from '@/utils/data'
 import clsx from 'clsx'
 import { useSearchParams } from 'next/navigation'
 

@@ -1,8 +1,8 @@
 'use client'
 
-import NavBar from '/components/nav'
+import NavBar from '@/components/nav'
 import { useState } from 'react'
-import { tags } from '/utils/data'
+import { tags } from '@/utils/data'
 import Link from 'next/link'
 import { CgSearch } from 'react-icons/cg'
 import Image from 'next/image'

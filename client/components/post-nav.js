@@ -3,9 +3,9 @@
 import Link from 'next/link'
 import { IoPersonCircle } from 'react-icons/io5'
 import { Notification } from 'iconsax-react'
-import home from '/public/vectors/home.svg'
-import square from '/public/vectors/square.svg'
-import community from '/public/vectors/community.svg'
+import home from '@/public/vectors/home.svg'
+import square from '@/public/vectors/square.svg'
+import community from '@/public/vectors/community.svg'
 import Image from 'next/image'
 
 const PostsNavBar = () => {

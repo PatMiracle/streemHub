@@ -1,9 +1,9 @@
 'use client'
 
-import PostsNavBar from '/components/post-nav'
+import PostsNavBar from '@/components/post-nav'
 import { useState } from 'react'
-import htmlFolder from '/public/images/posts/html-folder.png'
-import folderLink from '/public/images/posts/folder-link.png'
+import htmlFolder from '@/public/images/posts/html-folder.png'
+import folderLink from '@/public/images/posts/folder-link.png'
 import Image from 'next/image'
 
 const Header = () => {

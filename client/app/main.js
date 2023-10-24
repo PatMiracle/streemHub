@@ -1,11 +1,10 @@
 import style from './styles.module.css'
-import features from '/utils/home-feats'
-import { faq } from '/utils/data'
-import tick from '/public/vectors/tick.svg'
+import features from '@/utils/home-feats'
+import { faq } from '@/utils/data'
+import tick from '@/public/vectors/tick.svg'
 import { MdPlayArrow } from 'react-icons/md'
 import Image from 'next/image'
 import clsx from 'clsx'
-import { motion } from 'framer-motion'
 
 const Main = () => {
   return (
@@ -28,13 +27,7 @@ const Main = () => {
         </div>
         <section className="grid gap-10 px-10 pb-16">
           {features.map(({ title, text, img }, i) => (
-            <motion.div
-              initial={{ y: 50, opacity: 0 }}
-              whileInView={{
-                y: 0,
-                opacity: 1,
-                transtion: { ease: 'easeInOut', duration: 1 },
-              }}
+            <div
               className={`${style.feature} flex items-center justify-between even:flex-row-reverse even:text-right`}
               key={i}
             >
@@ -59,7 +52,7 @@ const Main = () => {
               >
                 <Image src={img} alt={title} priority />
               </div>
-            </motion.div>
+            </div>
           ))}
         </section>
         {/* video */}

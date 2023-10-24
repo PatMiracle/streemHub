@@ -9,8 +9,8 @@ import {
   MessageNotif,
   Setting2,
 } from 'iconsax-react'
-import square from '/public/vectors/square.svg'
-import community from '/public/vectors/community.svg'
+import square from '@/public/vectors/square.svg'
+import community from '@/public/vectors/community.svg'
 import { IoPersonCircle } from 'react-icons/io5'
 import { MdPlayArrow } from 'react-icons/md'
 import { Image } from 'next/image'

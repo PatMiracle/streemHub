@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { posts as data } from '/utils/data'
+import { posts as data } from '@/utils/data'
 import { Trash } from 'iconsax-react'
 import Post from './post'
 

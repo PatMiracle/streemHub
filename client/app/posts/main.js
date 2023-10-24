@@ -1,8 +1,8 @@
 'use client'
 
 import CreatePost from './create-post'
-import Post from '/components/post'
-import { posts } from '/utils/data'
+import Post from '@/components/post'
+import { posts } from '@/utils/data'
 
 const Main = () => {
   return (

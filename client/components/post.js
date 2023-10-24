@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { FiShare2, FiThumbsUp } from 'react-icons/fi'
 import { TbMessageCircle2 } from 'react-icons/tb'
-import PostCommments from '/components/post-comments'
+import PostCommments from './post-comments'
 import clsx from 'clsx'
 
 const Post = ({ name, text, img }) => {

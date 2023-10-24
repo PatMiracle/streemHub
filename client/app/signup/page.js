@@ -1,4 +1,4 @@
-import img from '/public/images/signup-img.png'
+import img from '@/public/images/signup-img.png'
 import Image from 'next/image'
 import Form from './form'
 

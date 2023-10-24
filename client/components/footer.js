@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useEffect, useRef, useState } from 'react'
-import footerLinks from '/utils/footer-links'
+import footerLinks from '@/utils/footer-links'
 import Link from 'next/link'
 
 const email_regex = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/

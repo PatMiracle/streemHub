@@ -1,4 +1,4 @@
-import img from '/public/images/login-img.png'
+import img from '@/public/images/login-img.png'
 import Image from 'next/image'
 
 export default function ImgForm({ children }) {

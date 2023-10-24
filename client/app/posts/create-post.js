@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { FaMicrophone } from 'react-icons/fa'
-import PostForm from '/components/post-form'
+import PostForm from '@/components/post-form'
 
 export default function CreatePost() {
   const [active, setActive] = useState(false)

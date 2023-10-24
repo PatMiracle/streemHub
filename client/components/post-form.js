@@ -1,4 +1,4 @@
-import { iconsInputs } from '/utils/data'
+import { iconsInputs } from '@/utils/data'
 
 export default function PostForm() {
   return (

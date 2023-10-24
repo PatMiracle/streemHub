@@ -1,4 +1,4 @@
-import verifiedImg from '/public/images/verify_img.png'
+import verifiedImg from '@/public/images/verify_img.png'
 import Image from 'next/image'
 
 export default function VerifyLayout({ children }) {

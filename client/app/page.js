@@ -1,7 +1,7 @@
 import Header from './header'
-import Footer from '/components/footer'
+import Footer from '@/components/footer'
 import Main from './main'
-import moonRock from '/public/images/moon_rock.png'
+import moonRock from '@/public/images/moon_rock.png'
 import Image from 'next/image'
 
 export default function Home() {

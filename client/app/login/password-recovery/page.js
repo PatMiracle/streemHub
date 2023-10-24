@@ -1,7 +1,7 @@
 'use client'
 
 import ImgForm from '../img-form-layout'
-import img from '/public/images/login-img.png'
+import img from '@/public/images/login-img.png'
 import { User } from 'iconsax-react'
 import { useEffect, useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
