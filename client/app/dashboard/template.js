@@ -9,11 +9,12 @@ import {
   MessageNotif,
   Setting2,
 } from 'iconsax-react'
-import square from '@/public/vectors/square.svg'
-import community from '@/public/vectors/community.svg'
+import square from 'public/vectors/square.svg'
+import community from 'public/vectors/community.svg'
 import { IoPersonCircle } from 'react-icons/io5'
 import { MdPlayArrow } from 'react-icons/md'
-import { Image } from 'next/image'
+import Image from 'next/image'
+import { tags } from 'lib/data'
 
 const sidebar = [
   { icon: <Profile size={30} />, url: '/dashboard/profile' },
@@ -22,10 +23,11 @@ const sidebar = [
   { icon: <Setting2 size={30} />, url: '/dashboard/settings' },
 ]
 
-const DashboardLayout = ({ children }) => {
+export default function DashboardTemplate({ children }) {
   const pathname = usePathname()
   const [search, setSearch] = useState('')
   const [dropdown, setDropDown] = useState(false)
+  const [category, setCategory] = useState(0)
 
   return (
     <>
@@ -57,7 +59,7 @@ const DashboardLayout = ({ children }) => {
             className="flex items-center gap-4 bg-white rounded-[20px] py-4 px-6  w-8/12"
             onSubmit={(e) => e.preventDefault()}
           >
-            <span
+            <label
               className="rounded-lg py-2 px-3"
               style={{
                 boxShadow: '2px 4px 18px rgba(0, 0, 0, 0.25)',
@@ -68,19 +70,20 @@ const DashboardLayout = ({ children }) => {
                 id="categories"
                 className="xl:w-[100px] lg:w-[90px] xl:text-base lg:text-sm cursor-pointer text-black"
               >
-                <option value="category">Categories</option>
-                <option value="books">Books</option>
-                <option value="projects">Projects</option>
-                <option value="reasearch">Research works</option>
-                <option value="articles">Articles</option>
-                <option value="codes">Codes</option>
-                <option value="links">Links</option>
+                {tags.map((tag, i) => {
+                  return (
+                    <option key={i} className="capitalize" value={tag}>
+                      {tag}
+                    </option>
+                  )
+                })}
               </select>
-            </span>
+            </label>
             <input
               type="text"
               className="border-l-2 border-l-black px-4 py-2 flex-[40%]"
               placeholder="Search different categories"
+              value={search}
               onChange={(e) => setSearch(e.target.value)}
             />
             <button className="font-semibold text-purple500 bg-black py-2 xl:px-5 lg:px-3 rounded-[20px]">
@@ -126,5 +129,3 @@ const DashboardLayout = ({ children }) => {
     </>
   )
 }
-
-export default DashboardLayout
