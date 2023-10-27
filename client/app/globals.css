@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  background: black;
-  color: white;
-  overflow-x: hidden;
-}
-
 ::selection {
   background: #330e55;
 }

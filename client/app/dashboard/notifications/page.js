@@ -1,5 +1,5 @@
 import { MdPlayArrow } from 'react-icons/md'
-import { notifs } from '@/utils/data'
+import { notifs } from 'lib/data'
 
 export const metadata = {
   title: 'Notifications',

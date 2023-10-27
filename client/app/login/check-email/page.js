@@ -1,6 +1,6 @@
 'use client'
 
-import VerifyLayout from '/layouts/verify-layout'
+import VerifyLayout from 'layouts/verify-layout'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { useEffect } from 'react'
 

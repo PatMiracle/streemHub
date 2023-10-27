@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import VerifyLayout from '/layouts/verify-layout'
+import VerifyLayout from 'layouts/verify-layout'
 
 const VerifyEmail = () => {
   return (

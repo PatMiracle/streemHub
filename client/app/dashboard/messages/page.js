@@ -1,4 +1,4 @@
-import { messages } from '@/utils/data'
+import { messages } from 'lib/data'
 
 const AllMessages = () => {
   return (

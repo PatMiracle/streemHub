@@ -1,4 +1,4 @@
-import { messages } from '@/utils/data'
+import { messages } from 'lib/data'
 import { Trash } from 'iconsax-react'
 
 export const metadata = {
