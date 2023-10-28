@@ -13,21 +13,34 @@ const Form = () => {
   const [password, SetPassword] = useState('')
   const [showPwd, setShowPwd] = useState(false)
   const [remember, setRemember] = useState(false)
-  const { formError, setFormError } = useFormError()
+  const { formError, setFormError, resetFormError } = useFormError()
 
   // clear error as input changes
   useEffect(() => {
-    setFormError(false)
-  }, [username, password, setFormError])
+    resetFormError()
+  }, [username, password])
+
+  function validateInputs() {
+    let err = ''
+
+    if (!username) {
+      err += 'Username is required, '
+    } else if (!user_regex.test(username)) {
+      err += 'Username is not valid, '
+    }
+
+    if (password.length < 6) {
+      err += 'All passwords must be atleast 6 Characters'
+    }
+    return err
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // validate inputs
-    if (!user_regex.test(username)) {
-      setFormError(true)
-    }
-    if (password.length < 6) {
-      setFormError(true)
+    const inpErr = validateInputs()
+    setFormError(inpErr)
+    if (inpErr) {
+      return
     }
   }
 
@@ -35,9 +48,7 @@ const Form = () => {
     <>
       {formError && (
         <p className="absolute bg-[#FF1212aa] py-2 px-4 rounded-lg top-7 left-4">
-          Incorrect username or password. All passwords must be at
-          <br />
-          least 6 Characters
+          {formError}
         </p>
       )}
       <h2 className="font-bold text-5xl">Login</h2>

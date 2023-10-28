@@ -3,7 +3,11 @@
 import { useState, useEffect } from 'react'
 
 const useFormError = () => {
-  const [formError, setFormError] = useState(false)
+  const [formError, setFormError] = useState('')
+
+  function resetFormError() {
+    setFormError('')
+  }
 
   // scroll to top when formError is true
   useEffect(() => {
@@ -12,7 +16,7 @@ const useFormError = () => {
     }
   }, [formError])
 
-  return { formError, setFormError }
+  return { formError, setFormError, resetFormError }
 }
 
 export default useFormError

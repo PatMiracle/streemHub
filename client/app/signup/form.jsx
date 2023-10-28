@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { AiOutlineGoogle } from 'react-icons/ai'
 import { PasswordCheck } from 'iconsax-react'
@@ -16,23 +16,46 @@ const Form = () => {
   const [password, SetPassword] = useState('')
   const [showPwd, setShowPwd] = useState(false)
   const [agreement, setAgreement] = useState(false)
-  const { formError, setFormError } = useFormError()
+  const { formError, setFormError, resetFormError } = useFormError()
 
   // clear error as input changes
   useEffect(() => {
-    setFormError(false)
-  }, [firstName, lastName, email, password, setFormError])
+    resetFormError()
+  }, [firstName, lastName, email, password])
+
+  function validateInputs() {
+    let err = ''
+
+    if (!firstName) {
+      err += 'Firstname is required, '
+    } else if (!name_regex.test(firstName)) {
+      err += 'Firstname is not valid, '
+    }
+
+    if (!lastName) {
+      err += 'Lastname is required, '
+    } else if (!name_regex.test(lastName)) {
+      err += 'Lastname is not valid, '
+    }
+
+    if (!email) {
+      err += 'Email is required, '
+    } else if (!email_regex.test(email)) {
+      err += 'Invalid email, '
+    }
+
+    if (password.length < 6) {
+      err += 'All passwords must be atleast 6 Characters'
+    }
+    return err
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // validate inputs
-    if (
-      !name_regex.test(firstName) ||
-      !name_regex.test(lastName) ||
-      !email_regex.test(email) ||
-      password.length < 6
-    ) {
-      setFormError(true)
+    const inpErr = validateInputs()
+    setFormError(inpErr)
+    if (inpErr) {
+      return
     }
   }
 
@@ -40,9 +63,7 @@ const Form = () => {
     <>
       {formError && (
         <p className="absolute bg-[#FF1212aa] py-2 px-4 rounded-lg top-7 left-4 backdrop-blur-md">
-          Incorrect name, email or password. All passwords must be at
-          <br />
-          least 6 Characters
+          {formError}
         </p>
       )}
       <h2 className="font-bold text-5xl">Sign Up</h2>
